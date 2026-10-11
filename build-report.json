@@ -1,0 +1,71 @@
+{
+  "builtAt": "2026-10-11T13:48:16.324Z",
+  "mode": "minify-and-obfuscate",
+  "files": [
+    {
+      "file": "index.html:inline-1",
+      "sourceBytes": 1706,
+      "outputBytes": 1799
+    },
+    {
+      "file": "index.html:inline-2",
+      "sourceBytes": 37836,
+      "outputBytes": 22387
+    },
+    {
+      "file": "theme.js",
+      "sourceBytes": 1845,
+      "outputBytes": 2358
+    },
+    {
+      "file": "experience.js",
+      "sourceBytes": 13221,
+      "outputBytes": 11171
+    },
+    {
+      "file": "detection-scheduler.js",
+      "sourceBytes": 1539,
+      "outputBytes": 2303
+    },
+    {
+      "file": "alarm-sounds.js",
+      "sourceBytes": 5307,
+      "outputBytes": 5719
+    },
+    {
+      "file": "sound-ui.js",
+      "sourceBytes": 2200,
+      "outputBytes": 2772
+    },
+    {
+      "file": "experience-ui.js",
+      "sourceBytes": 11168,
+      "outputBytes": 11586
+    },
+    {
+      "file": "experience-preview.js",
+      "sourceBytes": 5679,
+      "outputBytes": 5476
+    },
+    {
+      "file": "monitor-ui.js",
+      "sourceBytes": 3635,
+      "outputBytes": 3993
+    },
+    {
+      "file": "fullpage.js",
+      "sourceBytes": 9129,
+      "outputBytes": 9135
+    },
+    {
+      "file": "platform.js",
+      "sourceBytes": 18333,
+      "outputBytes": 15106
+    },
+    {
+      "file": "widget.js",
+      "sourceBytes": 8240,
+      "outputBytes": 8185
+    }
+  ]
+}
