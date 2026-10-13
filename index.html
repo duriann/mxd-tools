@@ -99,12 +99,36 @@
         overflow: hidden;
         background: #05070a;
       }
-      .grid.preview-hidden { grid-template-columns: minmax(0, 1fr); }
-      .grid.preview-hidden .preview { display: none; }
-      .grid.preview-hidden .cards { grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); }
-      .platform-thresholds { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; margin: 10px 0; }
-      .platform-thresholds label { display: grid; gap: 4px; font-size: 12px; color: var(--muted); }
-      .platform-thresholds input { width: 100%; min-width: 0; background: #21262d; color: var(--text); border: 1px solid var(--border); border-radius: 6px; padding: 6px; }
+      .grid.preview-hidden {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .grid.preview-hidden .preview {
+        display: none;
+      }
+      .grid.preview-hidden .cards {
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      }
+      .platform-thresholds {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+        margin: 10px 0;
+      }
+      .platform-thresholds label {
+        display: grid;
+        gap: 4px;
+        font-size: 12px;
+        color: var(--muted);
+      }
+      .platform-thresholds input {
+        width: 100%;
+        min-width: 0;
+        background: #21262d;
+        color: var(--text);
+        border: 1px solid var(--border);
+        border-radius: 6px;
+        padding: 6px;
+      }
       canvas {
         display: block;
         width: 100%;
@@ -372,6 +396,9 @@
             <span style="font-size: 14px; color: var(--muted)"
               >交流群125491062</span
             >
+            <span style="font-size: 14px; color: var(--muted)"
+              >广告：自动过测谎加群125491062</span
+            >
           </h1>
 
           <p>
@@ -385,7 +412,13 @@
             <button id="snapshotButton" disabled>保存当前截图</button>
             <button id="widgetButton" type="button">小组件模式 ↗</button>
             <a class="page-link" href="#experienceScreen">经验统计 ↓</a>
-            <a class="page-link" href="./三转小助手.html" target="_blank" rel="noopener">三转小助手 ↗</a>
+            <a
+              class="page-link"
+              href="./三转小助手.html"
+              target="_blank"
+              rel="noopener"
+              >三转小助手 ↗</a
+            >
           </div>
           <p id="widgetStatus" class="hint" role="status" hidden></p>
           <p class="hint">
@@ -395,37 +428,74 @@
 
         <div class="grid">
           <div class="monitor-main">
-          <section class="panel preview">
-            <div class="preview-caption" aria-hidden="true"><span class="preview-dot"></span>游戏画面 · 实时预览</div>
-            <div id="placeholder" class="placeholder">
-              <strong>准备好开始监控</strong>
-              <span>选择游戏窗口后，画面和检测结果会在这里实时显示</span>
-              <button id="previewStart" class="primary" type="button" disabled>选择游戏窗口</button>
-              <small>本机识别 · 支持关闭预览 · 告警声音可自定义</small>
+            <section class="panel preview">
+              <div class="preview-caption" aria-hidden="true">
+                <span class="preview-dot"></span>游戏画面 · 实时预览
+              </div>
+              <div id="placeholder" class="placeholder">
+                <strong>准备好开始监控</strong>
+                <span>选择游戏窗口后，画面和检测结果会在这里实时显示</span>
+                <button
+                  id="previewStart"
+                  class="primary"
+                  type="button"
+                  disabled
+                >
+                  选择游戏窗口
+                </button>
+                <small>本机识别 · 支持关闭预览 · 告警声音可自定义</small>
+              </div>
+              <canvas id="previewCanvas"></canvas>
+            </section>
+            <div class="monitor-session panel" aria-label="本次监控概况">
+              <div>
+                <span class="label">本次运行</span
+                ><strong id="monitorDuration">00:00:00</strong>
+              </div>
+              <div>
+                <span class="label">提醒次数</span
+                ><strong id="monitorAlarmCount">0</strong>
+              </div>
+              <div class="monitor-health">
+                <span class="label">检测采样</span
+                ><strong id="monitorHeartbeat">等待开始</strong>
+              </div>
             </div>
-            <canvas id="previewCanvas"></canvas>
-          </section>
-          <div class="monitor-session panel" aria-label="本次监控概况">
-            <div><span class="label">本次运行</span><strong id="monitorDuration">00:00:00</strong></div>
-            <div><span class="label">提醒次数</span><strong id="monitorAlarmCount">0</strong></div>
-            <div class="monitor-health"><span class="label">检测采样</span><strong id="monitorHeartbeat">等待开始</strong></div>
-          </div>
-          <div class="monitor-overview">
-            <section class="panel monitor-log">
-              <div class="overview-heading"><h2>运行日志</h2><span class="overview-tag">最近 30 条</span></div>
-              <div id="log" class="log" role="log" aria-label="运行日志"></div>
-            </section>
-            <section class="panel monitor-alerts">
-              <div class="overview-heading"><h2>最近提醒</h2><span class="overview-tag">本次监控</span></div>
-              <div id="monitorAlertEmpty" class="monitor-empty"><span aria-hidden="true">✓</span><strong>暂无提醒记录</strong><small>告警触发后，记录类型、时间和持续时长</small></div>
-              <ol id="monitorAlertList" aria-label="最近告警记录"></ol>
-              <small class="overview-footnote">记录最近 5 条提醒，重新开始检测时清空</small>
-            </section>
-          </div>
+            <div class="monitor-overview">
+              <section class="panel monitor-log">
+                <div class="overview-heading">
+                  <h2>运行日志</h2>
+                  <span class="overview-tag">最近 30 条</span>
+                </div>
+                <div
+                  id="log"
+                  class="log"
+                  role="log"
+                  aria-label="运行日志"
+                ></div>
+              </section>
+              <section class="panel monitor-alerts">
+                <div class="overview-heading">
+                  <h2>最近提醒</h2>
+                  <span class="overview-tag">本次监控</span>
+                </div>
+                <div id="monitorAlertEmpty" class="monitor-empty">
+                  <span aria-hidden="true">✓</span><strong>暂无提醒记录</strong
+                  ><small>告警触发后，记录类型、时间和持续时长</small>
+                </div>
+                <ol id="monitorAlertList" aria-label="最近告警记录"></ol>
+                <small class="overview-footnote"
+                  >记录最近 5 条提醒，重新开始检测时清空</small
+                >
+              </section>
+            </div>
           </div>
 
           <aside class="panel">
-            <div class="overview-heading"><h2>检测控制</h2><span class="overview-tag">本机识别</span></div>
+            <div class="overview-heading">
+              <h2>检测控制</h2>
+              <span class="overview-tag">本机识别</span>
+            </div>
             <div class="cards">
               <div class="card">
                 <span class="label">组件状态</span
@@ -455,53 +525,133 @@
               </div>
             </div>
             <div class="detector-options">
-            <label class="option"
-              ><input id="soundEnabled" type="checkbox" checked />
-              启用声音提醒</label
-            >
-          <label class="option"
-            ><input id="previewEnabled" type="checkbox" checked />
-            显示画面预览</label
-          >
-          <label class="option"
-              ><input id="showBoxes" type="checkbox" checked />
-              在预览中标出命中区域</label
-            >
-            <label class="option"
-              ><input id="indicatorEnabled" type="checkbox" checked />
-              右上角探测仪图标匹配提醒</label
-            >
-            <label class="option"
-              ><input id="disconnectEnabled" type="checkbox" checked />
-              掉线、登录页、无响应和持续黑屏提醒</label
-            >
-            <label class="option">检测频率
-              <select id="detectionFrequency" style="background:#21262d;color:inherit;padding:6px;border:1px solid #30363d;border-radius:6px">
-                <option value="1000">1 次/秒</option><option value="500">2 次/秒</option>
-                <option value="250" selected>4 次/秒（默认）</option><option value="125">8 次/秒</option>
-              </select>
-            </label>
+              <label class="option"
+                ><input id="soundEnabled" type="checkbox" checked />
+                启用声音提醒</label
+              >
+              <label class="option"
+                ><input id="previewEnabled" type="checkbox" checked />
+                显示画面预览</label
+              >
+              <label class="option"
+                ><input id="showBoxes" type="checkbox" checked />
+                在预览中标出命中区域</label
+              >
+              <label class="option"
+                ><input id="indicatorEnabled" type="checkbox" checked />
+                右上角探测仪图标匹配提醒</label
+              >
+              <label class="option"
+                ><input id="disconnectEnabled" type="checkbox" checked />
+                掉线、登录页、无响应和持续黑屏提醒</label
+              >
+              <label class="option"
+                >检测频率
+                <select
+                  id="detectionFrequency"
+                  style="
+                    background: #21262d;
+                    color: inherit;
+                    padding: 6px;
+                    border: 1px solid #30363d;
+                    border-radius: 6px;
+                  "
+                >
+                  <option value="1000">1 次/秒</option>
+                  <option value="500">2 次/秒</option>
+                  <option value="250" selected>4 次/秒（默认）</option>
+                  <option value="125">8 次/秒</option>
+                </select>
+              </label>
             </div>
             <details class="sound-settings">
               <summary>平台掉落提醒设置</summary>
-              <label class="option"><input id="platformEnabled" type="checkbox" />启用掉落检测</label>
+              <label class="option"
+                ><input
+                  id="platformEnabled"
+                  type="checkbox"
+                />启用掉落检测</label
+              >
               <div class="platform-thresholds">
-                <label>掉落位移（原始画面像素）<input id="fallDistance" type="number" min="1" max="2000" step="1" value="40" /></label>
-                <label>持续确认（秒）<input id="fallConfirmSeconds" type="number" min="0.1" max="10" step="0.05" value="0.75" /></label>
-                <label>名字匹配最低分数<input id="nameMatchThreshold" type="number" min="0.1" max="1" step="0.01" value="0.75" /></label>
-                <label>平台画面相似度<input id="platformMatchThreshold" type="number" min="0.1" max="1" step="0.01" value="0.65" /></label>
-                <label>候选分数最小差距<input id="nameMatchGap" type="number" min="0" max="0.5" step="0.01" value="0.05" /></label>
-                <label>名字丢失容忍（秒）<input id="nameLostSeconds" type="number" min="1.1" max="10" step="0.1" value="2" /></label>
+                <label
+                  >掉落位移（原始画面像素）<input
+                    id="fallDistance"
+                    type="number"
+                    min="1"
+                    max="2000"
+                    step="1"
+                    value="40"
+                /></label>
+                <label
+                  >持续确认（秒）<input
+                    id="fallConfirmSeconds"
+                    type="number"
+                    min="0.1"
+                    max="10"
+                    step="0.05"
+                    value="0.75"
+                /></label>
+                <label
+                  >名字匹配最低分数<input
+                    id="nameMatchThreshold"
+                    type="number"
+                    min="0.1"
+                    max="1"
+                    step="0.01"
+                    value="0.75"
+                /></label>
+                <label
+                  >平台画面相似度<input
+                    id="platformMatchThreshold"
+                    type="number"
+                    min="0.1"
+                    max="1"
+                    step="0.01"
+                    value="0.65"
+                /></label>
+                <label
+                  >候选分数最小差距<input
+                    id="nameMatchGap"
+                    type="number"
+                    min="0"
+                    max="0.5"
+                    step="0.01"
+                    value="0.05"
+                /></label>
+                <label
+                  >名字丢失容忍（秒）<input
+                    id="nameLostSeconds"
+                    type="number"
+                    min="1.1"
+                    max="10"
+                    step="0.1"
+                    value="2"
+                /></label>
               </div>
-              <small>位移越大、确认越久，越不容易因小幅移动报警。匹配最低分越高越严格；候选差距用于排除相似名字。平台相似度仅控制变化提示，不触发掉落报警。设置自动保存在本机浏览器。</small>
-              <button id="platformThresholdReset" type="button">恢复默认阈值</button>
-              <div class="toolbar"><button id="platformSetup" type="button">框选平台和角色名字</button><button id="platformClear" type="button">清除选区</button></div>
-              <small id="platformStatus" role="status">未设置；请让角色站在平台上，再框选平台表面和角色名字。</small>
-              <small>适用于固定镜头；优先框选角色名字，角色本体动作变化容易丢失。镜头移动、切图或窗口分辨率变化后请重新框选。</small>
+              <small
+                >位移越大、确认越久，越不容易因小幅移动报警。匹配最低分越高越严格；候选差距用于排除相似名字。平台相似度仅控制变化提示，不触发掉落报警。设置自动保存在本机浏览器。</small
+              >
+              <button id="platformThresholdReset" type="button">
+                恢复默认阈值
+              </button>
+              <div class="toolbar">
+                <button id="platformSetup" type="button">
+                  框选平台和角色名字</button
+                ><button id="platformClear" type="button">清除选区</button>
+              </div>
+              <small id="platformStatus" role="status"
+                >未设置；请让角色站在平台上，再框选平台表面和角色名字。</small
+              >
+              <small
+                >适用于固定镜头；优先框选角色名字，角色本体动作变化容易丢失。镜头移动、切图或窗口分辨率变化后请重新框选。</small
+              >
             </details>
             <details class="sound-settings">
               <summary>自定义提示音设置</summary>
-              <label class="option" for="alarmSoundType">告警类型 <select id="alarmSoundType" aria-label="告警类型"></select></label>
+              <label class="option" for="alarmSoundType"
+                >告警类型
+                <select id="alarmSoundType" aria-label="告警类型"></select
+              ></label>
               <small id="customSoundStatus">当前使用内置提示音</small>
               <small
                 >提示音按最大音量播放，实际响度取决于电脑和浏览器音量。</small
@@ -521,9 +671,14 @@
               <details class="instructions">
                 <summary>自定义提示音操作说明</summary>
                 <ol>
-                  <li>选择告警类型，再选择 MP3、WAV、OGG 或 M4A 文件（最多 20 MB）。</li>
+                  <li>
+                    选择告警类型，再选择 MP3、WAV、OGG 或 M4A 文件（最多 20
+                    MB）。
+                  </li>
                   <li>点击“试听”确认音量；报警时会自动循环播放。</li>
-                  <li>未单独设置的检测告警沿用通用提示音；经验目标使用独立提示音，只播放一次。同时告警时优先播放掉落、掉线等告警，当前告警消失后切换。</li>
+                  <li>
+                    未单独设置的检测告警沿用通用提示音；经验目标使用独立提示音，只播放一次。同时告警时优先播放掉落、掉线等告警，当前告警消失后切换。
+                  </li>
                   <li>异常消失、停止检测或取消声音提醒后会立即停止。</li>
                   <li>音频只在本机浏览器内使用；刷新页面后需要重新选择。</li>
                 </ol>
@@ -543,7 +698,9 @@
             <button id="experienceToggle" type="button">暂停统计</button>
             <button id="experienceReset" type="button">重置统计</button>
             <button id="experienceRegion" type="button">框选经验栏</button>
-            <button id="experiencePreview" type="button" disabled>识别预览</button>
+            <button id="experiencePreview" type="button" disabled>
+              识别预览
+            </button>
             <button id="experienceAuto" type="button">恢复自动定位</button>
             <a class="page-link" href="#detectionScreen">返回检测 ↑</a>
           </div>
@@ -553,16 +710,42 @@
           <p id="experienceRegionStatus" class="hint">
             定位范围：画面底部 70 像素
           </p>
-          <p class="hint">记录时起始经验：<span id="xpInitial">等待确认</span></p>
+          <p class="hint">
+            记录时起始经验：<span id="xpInitial">等待确认</span>
+          </p>
           <div class="experience-goal">
-            <label for="experienceGoalTarget">目标获得经验 <input id="experienceGoalTarget" type="number" min="1" step="1" inputmode="numeric" placeholder="输入目标经验" aria-describedby="experienceGoalStatus" /></label>
+            <label for="experienceGoalTarget"
+              >目标获得经验
+              <input
+                id="experienceGoalTarget"
+                type="number"
+                min="1"
+                step="1"
+                inputmode="numeric"
+                placeholder="输入目标经验"
+                aria-describedby="experienceGoalStatus"
+            /></label>
             <button id="experienceGoalSave" type="button">设置目标</button>
             <span id="experienceGoalStatus" role="status">未设置目标</span>
-            <progress id="experienceGoalProgress" max="100" value="0" aria-label="本次获得经验目标进度"></progress>
-            <details class="goal-sound-settings"><summary>目标提示音</summary>
+            <progress
+              id="experienceGoalProgress"
+              max="100"
+              value="0"
+              aria-label="本次获得经验目标进度"
+            ></progress>
+            <details class="goal-sound-settings">
+              <summary>目标提示音</summary>
               <small id="goalSoundStatus">目标提示音：内置提示音</small>
-              <div class="toolbar"><button id="chooseGoalSound" type="button">选择音频</button><button id="previewGoalSound" type="button">试听</button><button id="resetGoalSound" type="button" disabled>恢复默认</button></div>
-              <small>输入目标后点击“设置目标”，留空可关闭。按本次累计净增判断，达到目标提醒一次；重置统计后可再次提醒。音频刷新后需重新选择，声音提醒开关同样生效。</small>
+              <div class="toolbar">
+                <button id="chooseGoalSound" type="button">选择音频</button
+                ><button id="previewGoalSound" type="button">试听</button
+                ><button id="resetGoalSound" type="button" disabled>
+                  恢复默认
+                </button>
+              </div>
+              <small
+                >输入目标后点击“设置目标”，留空可关闭。按本次累计净增判断，达到目标提醒一次；重置统计后可再次提醒。音频刷新后需重新选择，声音提醒开关同样生效。</small
+              >
             </details>
           </div>
         </header>
@@ -630,15 +813,40 @@
     </dialog>
 
     <dialog id="experiencePreviewDialog">
-      <div class="overview-heading"><h2>经验识别预览</h2><button id="closeExperiencePreview" type="button">关闭</button></div>
+      <div class="overview-heading">
+        <h2>经验识别预览</h2>
+        <button id="closeExperiencePreview" type="button">关闭</button>
+      </div>
       <p id="experiencePreviewStatus" class="hint" role="status">等待检测</p>
       <p id="experiencePreviewMeta" class="hint"></p>
-      <div class="experience-preview-legend"><span class="preview-roi">蓝框：当前分析选区</span><span class="preview-candidate">橙框：EXP 候选（未确认）</span><span class="preview-confirmed">绿框：已识别 EXP</span><span class="preview-strip">黄框：数字分析区</span></div>
-      <canvas id="experiencePreviewCanvas" aria-label="捕获画面上的经验识别区域"></canvas>
+      <div class="experience-preview-legend">
+        <span class="preview-roi">蓝框：当前分析选区</span
+        ><span class="preview-candidate">橙框：EXP 候选（未确认）</span
+        ><span class="preview-confirmed">绿框：已识别 EXP</span
+        ><span class="preview-strip">黄框：数字分析区</span>
+      </div>
+      <canvas
+        id="experiencePreviewCanvas"
+        aria-label="捕获画面上的经验识别区域"
+      ></canvas>
       <strong class="experience-preview-title">局部放大（保留原始像素）</strong>
-      <div class="experience-preview-crop"><canvas id="experiencePreviewCrop" aria-label="经验分析区域放大图"></canvas></div>
-      <p class="hint">先看蓝框是否包含完整文字。橙框只是候选，不能证明框选正确；框全但仍解析失败时，可结合局部放大图检查文字清晰度或兼容性。预览只检测当前画面，不计入统计。</p>
-      <div class="toolbar"><button id="refreshExperiencePreview" type="button">刷新预览</button><button id="saveExperiencePreview" type="button" disabled>保存预览图</button><button id="reselectExperiencePreview" type="button">重新框选经验栏</button></div>
+      <div class="experience-preview-crop">
+        <canvas
+          id="experiencePreviewCrop"
+          aria-label="经验分析区域放大图"
+        ></canvas>
+      </div>
+      <p class="hint">
+        先看蓝框是否包含完整文字。橙框只是候选，不能证明框选正确；框全但仍解析失败时，可结合局部放大图检查文字清晰度或兼容性。预览只检测当前画面，不计入统计。
+      </p>
+      <div class="toolbar">
+        <button id="refreshExperiencePreview" type="button">刷新预览</button
+        ><button id="saveExperiencePreview" type="button" disabled>
+          保存预览图</button
+        ><button id="reselectExperiencePreview" type="button">
+          重新框选经验栏
+        </button>
+      </div>
     </dialog>
     <video id="sourceVideo" autoplay muted playsinline></video>
     <audio id="customAlarmAudio" preload="auto"></audio>
