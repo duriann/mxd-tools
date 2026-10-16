@@ -1,5 +1,5 @@
 {
-  "builtAt": "2026-10-16T12:54:11.529Z",
+  "builtAt": "2026-10-16T13:54:14.444Z",
   "mode": "minify-and-obfuscate",
   "files": [
     {
@@ -9,8 +9,8 @@
     },
     {
       "file": "index.html:inline-2",
-      "sourceBytes": 35529,
-      "outputBytes": 21270
+      "sourceBytes": 37259,
+      "outputBytes": 21858
     },
     {
       "file": "theme.js",
