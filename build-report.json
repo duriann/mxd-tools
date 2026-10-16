@@ -1,16 +1,16 @@
 {
-  "builtAt": "2026-10-13T09:03:46.081Z",
+  "builtAt": "2026-10-16T12:54:11.529Z",
   "mode": "minify-and-obfuscate",
   "files": [
     {
       "file": "index.html:inline-1",
-      "sourceBytes": 1706,
+      "sourceBytes": 1751,
       "outputBytes": 1799
     },
     {
       "file": "index.html:inline-2",
-      "sourceBytes": 38281,
-      "outputBytes": 22387
+      "sourceBytes": 35529,
+      "outputBytes": 21270
     },
     {
       "file": "theme.js",
@@ -26,6 +26,11 @@
       "file": "detection-scheduler.js",
       "sourceBytes": 1539,
       "outputBytes": 2303
+    },
+    {
+      "file": "dialog-validation.js",
+      "sourceBytes": 8871,
+      "outputBytes": 6910
     },
     {
       "file": "alarm-sounds.js",
@@ -45,7 +50,7 @@
     {
       "file": "experience-preview.js",
       "sourceBytes": 5679,
-      "outputBytes": 5476
+      "outputBytes": 5486
     },
     {
       "file": "monitor-ui.js",
@@ -59,8 +64,8 @@
     },
     {
       "file": "platform.js",
-      "sourceBytes": 18333,
-      "outputBytes": 15106
+      "sourceBytes": 21876,
+      "outputBytes": 17836
     },
     {
       "file": "widget.js",
