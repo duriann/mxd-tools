@@ -1,5 +1,5 @@
 {
-  "builtAt": "2026-10-16T13:54:14.444Z",
+  "builtAt": "2026-10-18T03:40:07.952Z",
   "mode": "minify-and-obfuscate",
   "files": [
     {
@@ -19,8 +19,8 @@
     },
     {
       "file": "experience.js",
-      "sourceBytes": 13221,
-      "outputBytes": 11171
+      "sourceBytes": 13735,
+      "outputBytes": 11400
     },
     {
       "file": "detection-scheduler.js",
