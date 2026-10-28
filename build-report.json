@@ -1,5 +1,5 @@
 {
-  "builtAt": "2026-10-18T03:40:07.952Z",
+  "builtAt": "2026-10-28T02:02:07.155Z",
   "mode": "minify-and-obfuscate",
   "files": [
     {
@@ -9,8 +9,8 @@
     },
     {
       "file": "index.html:inline-2",
-      "sourceBytes": 37259,
-      "outputBytes": 21858
+      "sourceBytes": 38455,
+      "outputBytes": 22397
     },
     {
       "file": "theme.js",
@@ -29,8 +29,8 @@
     },
     {
       "file": "dialog-validation.js",
-      "sourceBytes": 8871,
-      "outputBytes": 6910
+      "sourceBytes": 13083,
+      "outputBytes": 9172
     },
     {
       "file": "alarm-sounds.js",
@@ -59,8 +59,8 @@
     },
     {
       "file": "fullpage.js",
-      "sourceBytes": 9129,
-      "outputBytes": 9135
+      "sourceBytes": 9197,
+      "outputBytes": 9205
     },
     {
       "file": "platform.js",
