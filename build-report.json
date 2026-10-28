@@ -1,5 +1,5 @@
 {
-  "builtAt": "2026-10-28T02:02:07.155Z",
+  "builtAt": "2026-10-28T09:46:00.017Z",
   "mode": "minify-and-obfuscate",
   "files": [
     {
@@ -69,8 +69,8 @@
     },
     {
       "file": "widget.js",
-      "sourceBytes": 8240,
-      "outputBytes": 8185
+      "sourceBytes": 9243,
+      "outputBytes": 8700
     }
   ]
 }
