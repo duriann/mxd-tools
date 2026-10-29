@@ -1,5 +1,5 @@
 {
-  "builtAt": "2026-10-28T11:21:24.536Z",
+  "builtAt": "2026-10-29T02:48:25.418Z",
   "mode": "minify-and-obfuscate",
   "files": [
     {
@@ -9,8 +9,8 @@
     },
     {
       "file": "index.html:inline-2",
-      "sourceBytes": 39454,
-      "outputBytes": 23154
+      "sourceBytes": 39317,
+      "outputBytes": 23170
     },
     {
       "file": "theme.js",
@@ -29,8 +29,8 @@
     },
     {
       "file": "dialog-validation.js",
-      "sourceBytes": 16178,
-      "outputBytes": 11316
+      "sourceBytes": 13445,
+      "outputBytes": 9452
     },
     {
       "file": "alarm-sounds.js",
