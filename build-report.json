@@ -1,16 +1,11 @@
 {
-  "builtAt": "2026-10-29T02:48:25.418Z",
+  "builtAt": "2026-11-07T09:39:25.152Z",
   "mode": "minify-and-obfuscate",
   "files": [
     {
       "file": "index.html:inline-1",
-      "sourceBytes": 1751,
-      "outputBytes": 1799
-    },
-    {
-      "file": "index.html:inline-2",
-      "sourceBytes": 39317,
-      "outputBytes": 23170
+      "sourceBytes": 41329,
+      "outputBytes": 24739
     },
     {
       "file": "theme.js",
@@ -20,7 +15,7 @@
     {
       "file": "experience.js",
       "sourceBytes": 13735,
-      "outputBytes": 11400
+      "outputBytes": 11395
     },
     {
       "file": "detection-scheduler.js",
@@ -30,12 +25,17 @@
     {
       "file": "dialog-validation.js",
       "sourceBytes": 13445,
-      "outputBytes": 9452
+      "outputBytes": 9431
     },
     {
       "file": "alarm-sounds.js",
       "sourceBytes": 5366,
       "outputBytes": 5823
+    },
+    {
+      "file": "cv-loader.js",
+      "sourceBytes": 3352,
+      "outputBytes": 2917
     },
     {
       "file": "sound-ui.js",
@@ -64,13 +64,30 @@
     },
     {
       "file": "platform.js",
-      "sourceBytes": 21876,
-      "outputBytes": 17836
+      "sourceBytes": 22564,
+      "outputBytes": 18087
     },
     {
       "file": "widget.js",
       "sourceBytes": 9243,
       "outputBytes": 8700
     }
-  ]
+  ],
+  "opencv": {
+    "version": "688ccf2a737aa677",
+    "runtimeName": "opencv-runtime.688ccf2a737aa677.js",
+    "wasmName": "opencv.688ccf2a737aa677.wasm",
+    "files": [
+      {
+        "name": "opencv-runtime.688ccf2a737aa677.js",
+        "bytes": 225857,
+        "brotliBytes": 43319
+      },
+      {
+        "name": "opencv.688ccf2a737aa677.wasm",
+        "bytes": 8053876,
+        "brotliBytes": 1834174
+      }
+    ]
+  }
 }
