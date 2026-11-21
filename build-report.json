@@ -1,21 +1,22 @@
 {
-  "builtAt": "2026-11-07T09:39:25.152Z",
+  "builtAt": "2026-11-21T15:22:38.565Z",
   "mode": "minify-and-obfuscate",
+  "releaseSha256": "b352c8bbfea0491b9004a1cb13286f71bc3b7e20ffafd86245688d9c01c7529d",
   "files": [
     {
       "file": "index.html:inline-1",
-      "sourceBytes": 41329,
-      "outputBytes": 24739
+      "sourceBytes": 56482,
+      "outputBytes": 35009
     },
     {
       "file": "theme.js",
-      "sourceBytes": 1845,
-      "outputBytes": 2358
+      "sourceBytes": 1270,
+      "outputBytes": 1625
     },
     {
       "file": "experience.js",
-      "sourceBytes": 13735,
-      "outputBytes": 11395
+      "sourceBytes": 18065,
+      "outputBytes": 13572
     },
     {
       "file": "detection-scheduler.js",
@@ -24,53 +25,108 @@
     },
     {
       "file": "dialog-validation.js",
-      "sourceBytes": 13445,
-      "outputBytes": 9431
+      "sourceBytes": 13728,
+      "outputBytes": 9593
+    },
+    {
+      "file": "speech-alerts.js",
+      "sourceBytes": 12095,
+      "outputBytes": 9962
     },
     {
       "file": "alarm-sounds.js",
-      "sourceBytes": 5366,
-      "outputBytes": 5823
+      "sourceBytes": 9750,
+      "outputBytes": 9424
     },
     {
       "file": "cv-loader.js",
-      "sourceBytes": 3352,
-      "outputBytes": 2917
+      "sourceBytes": 2928,
+      "outputBytes": 2686
     },
     {
       "file": "sound-ui.js",
-      "sourceBytes": 2200,
-      "outputBytes": 2772
+      "sourceBytes": 8172,
+      "outputBytes": 7492
     },
     {
       "file": "experience-ui.js",
-      "sourceBytes": 11168,
-      "outputBytes": 11586
+      "sourceBytes": 17175,
+      "outputBytes": 16422
     },
     {
       "file": "experience-preview.js",
-      "sourceBytes": 5679,
-      "outputBytes": 5486
+      "sourceBytes": 6401,
+      "outputBytes": 5956
     },
     {
       "file": "monitor-ui.js",
-      "sourceBytes": 3635,
-      "outputBytes": 3993
+      "sourceBytes": 9213,
+      "outputBytes": 7965
     },
     {
       "file": "fullpage.js",
-      "sourceBytes": 9197,
-      "outputBytes": 9205
+      "sourceBytes": 1280,
+      "outputBytes": 1738
     },
     {
       "file": "platform.js",
-      "sourceBytes": 22564,
-      "outputBytes": 18087
+      "sourceBytes": 20691,
+      "outputBytes": 16600
+    },
+    {
+      "file": "drop-ui.js",
+      "sourceBytes": 22594,
+      "outputBytes": 16286
+    },
+    {
+      "file": "minimap-monitor.js",
+      "sourceBytes": 8801,
+      "outputBytes": 6265
     },
     {
       "file": "widget.js",
-      "sourceBytes": 9243,
-      "outputBytes": 8700
+      "sourceBytes": 9125,
+      "outputBytes": 8352
+    },
+    {
+      "file": "experience-worker.js",
+      "sourceBytes": 1707,
+      "outputBytes": 2020
+    },
+    {
+      "file": "drop-worker.js",
+      "sourceBytes": 7041,
+      "outputBytes": 6192
+    },
+    {
+      "file": "drop-detector.js",
+      "sourceBytes": 16292,
+      "outputBytes": 10342
+    },
+    {
+      "file": "minimap-reader.js",
+      "sourceBytes": 11069,
+      "outputBytes": 6533
+    },
+    {
+      "file": "minimap-worker.js",
+      "sourceBytes": 6673,
+      "outputBytes": 5686
+    },
+    {
+      "file": "drop-map.js",
+      "sourceBytes": 11056,
+      "outputBytes": 7021
+    },
+    {
+      "file": "sprite-atlas.js",
+      "sourceBytes": 1426,
+      "outputBytes": 1604
+    },
+    {
+      "file": "auto-platform.js",
+      "sourceBytes": 9115,
+      "outputBytes": 6495
     }
   ],
   "opencv": {
@@ -89,5 +145,145 @@
         "brotliBytes": 1834174
       }
     ]
+  },
+  "mapData": {
+    "catalog": {
+      "name": "assets/drop-monitor/catalog.23a758b30998c352.json",
+      "bytes": 1130763,
+      "brotliBytes": 146636,
+      "gzipBytes": 170203
+    },
+    "platforms": {
+      "name": "assets/drop-monitor/platforms.fcdd673f2d5bff5d.json",
+      "bytes": 2495037,
+      "brotliBytes": 613506,
+      "gzipBytes": 719534
+    }
+  },
+  "sources": {
+    "tools/build-release.cjs": "ea448e29e4f78468dcd9a5323da238b26be5afd6346051ed401fa4168a23a6a2",
+    "tools/release-output.cjs": "7f366f71334abda32c0f26fc6729e392defbc5c1706f37009a7518ca85d95344",
+    "tools/prepare-opencv.cjs": "56dbf0bd55f9a8401afff1a147fe1d6b01741f354896524e428d95928d1be75f",
+    "package.json": "98a5f904f645f40b7a900e7c671ac7c1e742dd14a7e351d1d10e398326172a38",
+    "pnpm-lock.yaml": "493a9ad27253f7bdd4648ece1f37be2b7046507f46b346100eb6253fb97b1b36",
+    "opencv.js": "688ccf2a737aa677414f5f90b5f321138e5df7520b24611cb3d88e0617dd70ce",
+    "assets/drop-monitor/catalog.json": "23a758b30998c352b793b354ebf48b99de61ff2c6d99a0ccc5794ed117c2a7ad",
+    "assets/drop-monitor/platforms.json": "fcdd673f2d5bff5da489deb5326ffd30acf60ddfcc0bd5f29031a661b75ad95a",
+    "index.html": "33a45c81a404bf90e00b9ae81704129781b1ec3727884feff5f71cd18e414000",
+    "theme.js": "579bfac8c5fc516cb656fdd3f987a18f6daea6b682cd25693063c59ade098a27",
+    "experience.js": "17cda1aaec012352504f9fee8e1093255e51d7c1c376cd68079c98a8a480b72b",
+    "detection-scheduler.js": "67254bd8c529fe61c71f7c5f4430ec02a2db48379d5f7cf8167eb174ec46d288",
+    "dialog-validation.js": "c053b777b4a309e855ef66b89f23f63fb5f13f898e3798379ed8b67d02abe944",
+    "speech-alerts.js": "69a0c485accc4c3c3051488f7ce39b56a47298894060993bc7357fd45a293132",
+    "alarm-sounds.js": "c2132678af12765750a660e4058e1d269f695e7077cac7465bfb64af3886c675",
+    "cv-loader.js": "b910e593971749b0a8f8d6685b0bf69e8be42f5e62e01ae0fe3edda5dd442ebf",
+    "sound-ui.js": "97f9b9ff823fd8aa9e5e47060479e14d0d6520994bc89db3ac0b0f5591ba48d8",
+    "experience-ui.js": "ff64245be3d2dfe2bb4a277f6846912911c770456c43987742630060eb4d3398",
+    "experience-preview.js": "bd785427ed04961dfcf86264ad6246e972c8f0ea4b6710a8439497b622c8369e",
+    "monitor-ui.js": "beb42d1431810cd8ab029e1f4f8e6b6e276b890156929866a1c3319672f7fc36",
+    "fullpage.js": "59a56a1bcbed12da0186339dc94ef456c87140d7ae19bed3237e96b5e7730e07",
+    "platform.js": "d0a059e6d18f92a4baa98350fe2220a03619bca5ac29d6dfdad0e1f52b4f108f",
+    "drop-ui.js": "2829d773e9a7ed11e516d1864bc1f513e0a4389c8811f86753460f7dc3e1e2dc",
+    "minimap-monitor.js": "24d3fd677bde7483e21d1e1f7defef731026718a57a894ff0b14571779dbfd84",
+    "widget.js": "8802a67fbb19e269e077bf1424969fc44eff640060eb5ba339892c471ae15da5",
+    "experience-worker.js": "6d6c3d5520f563e3cf1f1107797af476a90be275eb51f87c00328c341b4adbe8",
+    "drop-worker.js": "57f2329445298e70d3945beccbd5a0120eca1a687bb48098f7042b2c23ef8895",
+    "drop-detector.js": "d436538ffe1baab3d4909438ee2296d6739f415ccefa944a443da81a1cd37cd2",
+    "minimap-reader.js": "b89fbb414ea5a01d6fee9e5a5833221da95f2a8eefd11c6a01c7d62855618763",
+    "minimap-worker.js": "cd5503019b1e47fd6183a1ece3f5faa9706d99450043cf9e54a5f63596fb5237",
+    "drop-map.js": "e20767f2ce7ff76e425e32162bb6ba8da79e7bd07f4bd95d7888118f1033e398",
+    "sprite-atlas.js": "0696306ac0ba81b4366dd3e6c162c58dcbae2c30939abca9893820e94b54e587",
+    "auto-platform.js": "ee7826aff5ec2661227351dd8646a4399a0e6bb6c6166c490258fe3a7e038aa1",
+    "assets/drop-monitor/items.75ad88620a0de162.png": "75ad88620a0de162604bf984df6a21daa831d49fce5977843fad7ece561f8c9b",
+    "assets/drop-monitor/items.9230781da01999ac.png": "9230781da01999ac09d3d01ddd28d172d577fdf58ccfbd082dbdfafbafb0ea6b",
+    "assets/drop-monitor/items.001f44ea19689106.png": "001f44ea19689106a373cf5a1e54aaaf0ce99febec4ccb886f617c9f5049903b",
+    "assets/drop-monitor/items.b04ce91050d1401f.png": "b04ce91050d1401fdc30bded013124e137c5ea69cd2a33ece54554caf15f1fd0",
+    "assets/drop-monitor/items.4fd6ea027ad4f866.png": "4fd6ea027ad4f8660e1b915a5718f83154cded1fda7a5c3933f47256ba3a1d65",
+    "assets/drop-monitor/items.983585e59a01df4c.png": "983585e59a01df4c2f50f9d56c31b6020b3bdbf853e9efcb3aa1fc75a874802c",
+    "assets/drop-monitor/items.d0740f5c8e1502db.png": "d0740f5c8e1502db50833136b74a60cfdf612b5a603074cdb23c115a142622f2",
+    "assets/drop-monitor/items.abc54d2896a22af8.png": "abc54d2896a22af80b5cbad4d2f165645494465f7c968429cab81520ea60c4d2",
+    "assets/drop-monitor/items.ec8f8393b9448d54.png": "ec8f8393b9448d544543dc23264831c38333025d4a850d1b49e69560d3daf66f",
+    "assets/drop-monitor/minimaps.ed7ee2223ed68458.png": "ed7ee2223ed68458f4f9aaa185671228de553d6b6600a4be62ecdfefd542217b",
+    "assets/drop-monitor/minimaps.270e01c211a3fe0e.png": "270e01c211a3fe0ea99b51dead1c57efbd7d6cb716c2a40487c317b6d4f2f014",
+    "assets/drop-monitor/minimaps.0d04aed0060d37b1.png": "0d04aed0060d37b1b7bf0458813b626e70a237ca5839cff191229a3516e619b3",
+    "assets/drop-monitor/minimaps.9a2f19c7fc557861.png": "9a2f19c7fc5578614882192f0a42b8f7ff8dd47299b24ab808dbf315cef2c843",
+    "assets/drop-monitor/minimaps.0d82f541eb72103b.png": "0d82f541eb72103b4c0e34fdaebd1c51f6a20545c7b06e2346fcde0a3287f015",
+    "assets/drop-monitor/minimaps.fb86a525f4db61b2.png": "fb86a525f4db61b2aff3582e6aa6dd6aa00f52d1e517b40508cebe67b5ff36d7",
+    "assets/drop-monitor/minimaps.bbbf130eef12ee19.png": "bbbf130eef12ee1926610002d3a81da88bb9093dfba74ebd2b87b8f6980cb59c",
+    "assets/drop-monitor/minimaps.881e76c0bcbc46b1.png": "881e76c0bcbc46b128d089ac68a84c932e5d19d6d7b4b50242dabba71b382e2b",
+    "assets/drop-monitor/minimaps.461e436e33bb8715.png": "461e436e33bb87151a152392e4cd2ac0aa2c16d8753a34a9925d01adc7fb42b9",
+    "assets/drop-monitor/minimaps.cf110e371e34dcea.png": "cf110e371e34dcea5b508a6e3e340d05023ba0a53a019d08fc94318092f0c1e5",
+    "assets/drop-monitor/minimaps.78cb988ab67fb5cf.png": "78cb988ab67fb5cff654726f070c811bf2fb192c318e58b85322c860e992b4a7",
+    "assets/drop-monitor/minimaps.e3f0bb3a8e70b563.png": "e3f0bb3a8e70b563559ac7ea4fedca2e42bf05d9560769f6fab28c9a1d70296c",
+    "theme.css": "80691d7691d1d8b9f7c929c57889b980d69cfd1337a516a6bd831560e7351415",
+    "serve_detector.ps1": "8f4c946a4789d8949538f7ec2a66558e7d0e742460e78c325e2f3bbebb87d92e",
+    "LocalStaticServer.cs": "72480a7f6028a486031198054f92cd98c62f0190a6524d6cedc5406e20099b67",
+    "双击我打开就行.bat": "b54056ede23fc00fa65a718da26dc334ba921779b70f88581e4433240dd26f47",
+    ".nojekyll": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "artifacts": {
+    "opencv-runtime.688ccf2a737aa677.js": "86c3447a7299781339833dcdf2f0889a69153f0af210ebafa1f4e4720848a6d2",
+    "opencv-runtime.688ccf2a737aa677.js.br": "989159d5badc619e1099ee58bd4402963f41f8e31c53a64cc99eb04877589850",
+    "opencv-runtime.688ccf2a737aa677.js.gz": "685f8818238cb3d05f752d7de1315e0534addbe6aad2dec06300500e5d96aaf1",
+    "opencv.688ccf2a737aa677.wasm": "bb2dbf0cd083a532a44c7d577253945ed95bedb8c8dd27deefb2debeb5bc9ad6",
+    "opencv.688ccf2a737aa677.wasm.br": "f4df5e71b08d470408aa4e616807267443465f8988a2ef52d2220343c9d37e78",
+    "opencv.688ccf2a737aa677.wasm.gz": "5ab7420d5790b4142350518bb5fa6d04a80c72ba5c0f6520ea9050b8380ec8a1",
+    "assets/drop-monitor/catalog.23a758b30998c352.json": "23a758b30998c352b793b354ebf48b99de61ff2c6d99a0ccc5794ed117c2a7ad",
+    "assets/drop-monitor/catalog.23a758b30998c352.json.br": "632b2ed73dd66d5d88d09540920a8de38f26108b33b3afd3486de443f91aad5c",
+    "assets/drop-monitor/catalog.23a758b30998c352.json.gz": "26be7408f08ab0478840899a1c546e5ecba4e264a4cdf0538346649be867587b",
+    "assets/drop-monitor/platforms.fcdd673f2d5bff5d.json": "fcdd673f2d5bff5da489deb5326ffd30acf60ddfcc0bd5f29031a661b75ad95a",
+    "assets/drop-monitor/platforms.fcdd673f2d5bff5d.json.br": "53cc13e08322f9eb423229daa7bc8fc84bc0e2db2e41e750887f2ddd54ebb23c",
+    "assets/drop-monitor/platforms.fcdd673f2d5bff5d.json.gz": "c641b9a55c0d5f23307e8959a232686282696745a6dc3258904b1f596651b543",
+    "index.html": "42c6adcce06500cafda5f147ac03ed8fafe2e79d1bea29ab51843ba9c30eec2e",
+    "theme.js": "ced30822e479a480591822a1decdbbd49216c1b9841ded50da0a039f1242da5d",
+    "experience.js": "7a28cd4038a3a36665531861f0a6365aa5098f1e5d790f7631d0c572e9aa9354",
+    "detection-scheduler.js": "f9a93b34bf580083402ce6d5dee8811b3141658a3125c7a120e2d4b241f5f0d8",
+    "dialog-validation.js": "687447e7427d872610d1204e369ebaf3b67863639c3b2941488fdfd729955804",
+    "speech-alerts.js": "b0dd24a97908dd61f6c73dc740a6823dd88fa38d42a18d467a56afb6f36ed14c",
+    "alarm-sounds.js": "198eb171b2054069f36de1197e7a03c7b4b673409cdbb950a4ea402592a5a703",
+    "cv-loader.js": "89cee9b1c2e09896053c060651e26c08a8c26df66edc6457fc5f849f4a4d47a6",
+    "sound-ui.js": "96030a7c495ef6bcfdb3164fa2e0f26892e88069b8041b417d7b8e0f6b20e449",
+    "experience-ui.js": "ef8607357026e4376f65c033280514e4428b0f769eeeab56a3b66e9ac8e59005",
+    "experience-preview.js": "e87571e0cd8e3fbf3df856b259cd45dd66c77ea92885121e5d8452781b2644e6",
+    "monitor-ui.js": "f7b0121fea8bc200d6a136a07b6561c070241c5f3deac5ab11535b28011b9e9c",
+    "fullpage.js": "5df9df03d7d777e35ff74f5cdb1544890a089b087867c806a98575719840c36a",
+    "platform.js": "f10dd4307caab677d58c5d4ed28ed6a53baac2e1035db3cd43f436230033ff83",
+    "drop-ui.js": "01ffc0a9fa9b4e3e6bdf3a7522336724355b82e699b8804bcff3a4960cbac9a1",
+    "minimap-monitor.js": "e0be35d2f7a468952681fbf626ced4ac55e352d56761374f9157078137910d22",
+    "widget.js": "514ae617dc173d3ecf6a9ad7b870240acd29502d9fa0cc15a46ef72ea9581b89",
+    "experience-worker.js": "c0cd8b6a9eeed1f1b41e97f833347374f3054a667efb7d00bc00a20baed57404",
+    "drop-worker.js": "5678a03d9526a4c6be205e90b31258cac33cead18b694415b0a3422bb36da614",
+    "drop-detector.js": "40b52c5becff3a2843eccbb5224f624e24edcbaa947f3796ee74f48f624bb905",
+    "minimap-reader.js": "eb77de0ad880e7977a759ffe0b9fdab3f4224591a960af401d9c36755d10a5ad",
+    "minimap-worker.js": "457aa300779796b58b383a334c77bf5c86fa748dbd5a88b10f99c3cd25585474",
+    "drop-map.js": "7f9e1bc99777c44d2445bc15943d4cb5189a9685529f5389c99af2d42e533f6e",
+    "sprite-atlas.js": "143ae9a95a7c1221242f4d7e668bfb5b22051d797b0853c02d177f38f4bf7e5e",
+    "auto-platform.js": "bf83a0e48fc5d32356adbd1521f65953e0b9e5f3ba7dbc3ad9eb60086d403ff7",
+    "assets/drop-monitor/items.75ad88620a0de162.png": "75ad88620a0de162604bf984df6a21daa831d49fce5977843fad7ece561f8c9b",
+    "assets/drop-monitor/items.9230781da01999ac.png": "9230781da01999ac09d3d01ddd28d172d577fdf58ccfbd082dbdfafbafb0ea6b",
+    "assets/drop-monitor/items.001f44ea19689106.png": "001f44ea19689106a373cf5a1e54aaaf0ce99febec4ccb886f617c9f5049903b",
+    "assets/drop-monitor/items.b04ce91050d1401f.png": "b04ce91050d1401fdc30bded013124e137c5ea69cd2a33ece54554caf15f1fd0",
+    "assets/drop-monitor/items.4fd6ea027ad4f866.png": "4fd6ea027ad4f8660e1b915a5718f83154cded1fda7a5c3933f47256ba3a1d65",
+    "assets/drop-monitor/items.983585e59a01df4c.png": "983585e59a01df4c2f50f9d56c31b6020b3bdbf853e9efcb3aa1fc75a874802c",
+    "assets/drop-monitor/items.d0740f5c8e1502db.png": "d0740f5c8e1502db50833136b74a60cfdf612b5a603074cdb23c115a142622f2",
+    "assets/drop-monitor/items.abc54d2896a22af8.png": "abc54d2896a22af80b5cbad4d2f165645494465f7c968429cab81520ea60c4d2",
+    "assets/drop-monitor/items.ec8f8393b9448d54.png": "ec8f8393b9448d544543dc23264831c38333025d4a850d1b49e69560d3daf66f",
+    "assets/drop-monitor/minimaps.ed7ee2223ed68458.png": "ed7ee2223ed68458f4f9aaa185671228de553d6b6600a4be62ecdfefd542217b",
+    "assets/drop-monitor/minimaps.270e01c211a3fe0e.png": "270e01c211a3fe0ea99b51dead1c57efbd7d6cb716c2a40487c317b6d4f2f014",
+    "assets/drop-monitor/minimaps.0d04aed0060d37b1.png": "0d04aed0060d37b1b7bf0458813b626e70a237ca5839cff191229a3516e619b3",
+    "assets/drop-monitor/minimaps.9a2f19c7fc557861.png": "9a2f19c7fc5578614882192f0a42b8f7ff8dd47299b24ab808dbf315cef2c843",
+    "assets/drop-monitor/minimaps.0d82f541eb72103b.png": "0d82f541eb72103b4c0e34fdaebd1c51f6a20545c7b06e2346fcde0a3287f015",
+    "assets/drop-monitor/minimaps.fb86a525f4db61b2.png": "fb86a525f4db61b2aff3582e6aa6dd6aa00f52d1e517b40508cebe67b5ff36d7",
+    "assets/drop-monitor/minimaps.bbbf130eef12ee19.png": "bbbf130eef12ee1926610002d3a81da88bb9093dfba74ebd2b87b8f6980cb59c",
+    "assets/drop-monitor/minimaps.881e76c0bcbc46b1.png": "881e76c0bcbc46b128d089ac68a84c932e5d19d6d7b4b50242dabba71b382e2b",
+    "assets/drop-monitor/minimaps.461e436e33bb8715.png": "461e436e33bb87151a152392e4cd2ac0aa2c16d8753a34a9925d01adc7fb42b9",
+    "assets/drop-monitor/minimaps.cf110e371e34dcea.png": "cf110e371e34dcea5b508a6e3e340d05023ba0a53a019d08fc94318092f0c1e5",
+    "assets/drop-monitor/minimaps.78cb988ab67fb5cf.png": "78cb988ab67fb5cff654726f070c811bf2fb192c318e58b85322c860e992b4a7",
+    "assets/drop-monitor/minimaps.e3f0bb3a8e70b563.png": "e3f0bb3a8e70b563559ac7ea4fedca2e42bf05d9560769f6fab28c9a1d70296c",
+    "theme.css": "80691d7691d1d8b9f7c929c57889b980d69cfd1337a516a6bd831560e7351415",
+    "serve_detector.ps1": "8f4c946a4789d8949538f7ec2a66558e7d0e742460e78c325e2f3bbebb87d92e",
+    "LocalStaticServer.cs": "72480a7f6028a486031198054f92cd98c62f0190a6524d6cedc5406e20099b67",
+    "双击我打开就行.bat": "b54056ede23fc00fa65a718da26dc334ba921779b70f88581e4433240dd26f47",
+    ".nojekyll": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
   }
 }

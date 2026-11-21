@@ -1,138 +1,82 @@
 param([switch]$NoBrowser)
 
-$ErrorActionPreference = "Stop"
-$serverRoot = Split-Path -Parent $MyInvocation.MyCommand.Path
-$listener = $null
-$port = $null
-
-foreach ($candidatePort in 8765..8775) {
-    try {
-        $candidate = [System.Net.Sockets.TcpListener]::new(
-            [System.Net.IPAddress]::Loopback,
-            $candidatePort
-        )
-        $candidate.Start()
-        $listener = $candidate
-        $port = $candidatePort
-        break
-    }
-    catch {
-        if ($candidate) {
-            $candidate.Stop()
-        }
-    }
-}
-
-if (-not $listener) {
-    Write-Error "No free local port was found in 8765-8775."
-    exit 1
-}
-
-$url = "http://127.0.0.1:$port/index.html"
-Write-Host "Captcha detector is running at $url"
-Write-Host "Keep this window open. Press Ctrl+C or close it to stop."
-if (-not $NoBrowser) {
-    Start-Process $url
-}
-
-$rootPrefix = [System.IO.Path]::GetFullPath($serverRoot).TrimEnd('\') + '\'
-
+$ErrorActionPreference = 'Stop'
+$serverRoot = [System.IO.Path]::GetFullPath($PSScriptRoot)
+$sha = [System.Security.Cryptography.SHA256]::Create()
 try {
-    while ($true) {
-        $client = $listener.AcceptTcpClient()
-        # Browsers can preconnect without sending a request. Bound the read
-        # so an idle connection cannot block this single-client server.
-        $client.ReceiveTimeout = 3000
-        $client.SendTimeout = 15000
+    $instanceId = [System.BitConverter]::ToString(
+        $sha.ComputeHash([System.Text.Encoding]::UTF8.GetBytes($serverRoot.ToUpperInvariant()))
+    ).Replace('-', '').ToLowerInvariant()
+}
+finally {
+    $sha.Dispose()
+}
+
+function Find-RunningPort {
+    $network = [System.Net.NetworkInformation.IPGlobalProperties]::GetIPGlobalProperties()
+    $listeningPorts = $network.GetActiveTcpListeners().Port
+    foreach ($candidatePort in 8765..8775) {
+        if ($candidatePort -notin $listeningPorts) { continue }
+        $request = [System.Net.WebRequest]::CreateHttp(
+            "http://127.0.0.1:$candidatePort/.well-known/maple-monitor")
+        $request.Proxy = $null
+        $request.Timeout = 300
+        $request.ReadWriteTimeout = 300
         try {
-            $stream = $client.GetStream()
-            $reader = [System.IO.StreamReader]::new(
-                $stream,
-                [System.Text.Encoding]::ASCII,
-                $false,
-                1024,
-                $true
-            )
-            $requestLine = $reader.ReadLine()
-            while ($true) {
-                $line = $reader.ReadLine()
-                if ([string]::IsNullOrEmpty($line)) {
-                    break
+            $response = $request.GetResponse()
+            try {
+                if ($response.Headers['X-Maple-Monitor-Instance'] -eq $instanceId) {
+                    return $candidatePort
                 }
             }
-
-            $status = "200 OK"
-            $contentType = "application/octet-stream"
-            $body = [byte[]]::new(0)
-            $parts = if ($requestLine) { $requestLine.Split(' ') } else { @() }
-
-            if ($parts.Count -lt 2 -or $parts[0] -ne "GET") {
-                $status = "400 Bad Request"
-                $body = [System.Text.Encoding]::UTF8.GetBytes("Bad request")
-                $contentType = "text/plain; charset=utf-8"
+            finally {
+                $response.Dispose()
             }
-            else {
-                $requestPath = $parts[1].Split('?')[0]
-                $relativePath = [System.Uri]::UnescapeDataString($requestPath).TrimStart('/')
-                if (-not $relativePath) {
-                    $relativePath = "index.html"
-                }
-                $relativePath = $relativePath.Replace(
-                    '/',
-                    [System.IO.Path]::DirectorySeparatorChar
-                )
-                $fullPath = [System.IO.Path]::GetFullPath(
-                    [System.IO.Path]::Combine($serverRoot, $relativePath)
-                )
-
-                if (
-                    -not $fullPath.StartsWith(
-                        $rootPrefix,
-                        [System.StringComparison]::OrdinalIgnoreCase
-                    ) -or
-                    -not [System.IO.File]::Exists($fullPath)
-                ) {
-                    $status = "404 Not Found"
-                    $body = [System.Text.Encoding]::UTF8.GetBytes("Not found")
-                    $contentType = "text/plain; charset=utf-8"
-                }
-                else {
-                    $body = [System.IO.File]::ReadAllBytes($fullPath)
-                    $contentType = switch (
-                        [System.IO.Path]::GetExtension($fullPath).ToLowerInvariant()
-                    ) {
-                        ".html" { "text/html; charset=utf-8" }
-                        ".js" { "application/javascript; charset=utf-8" }
-                        ".wasm" { "application/wasm" }
-                        ".css" { "text/css; charset=utf-8" }
-                        ".png" { "image/png" }
-                        default { "application/octet-stream" }
-                    }
-                }
-            }
-
-            $header = (
-                "HTTP/1.1 $status`r`n" +
-                "Content-Type: $contentType`r`n" +
-                "Content-Length: $($body.Length)`r`n" +
-                "Cache-Control: no-store`r`n" +
-                "Connection: close`r`n`r`n"
-            )
-            $headerBytes = [System.Text.Encoding]::ASCII.GetBytes($header)
-            $stream.Write($headerBytes, 0, $headerBytes.Length)
-            if ($body.Length) {
-                $stream.Write($body, 0, $body.Length)
-            }
-            $stream.Flush()
         }
-        catch {
-            Write-Warning $_.Exception.Message
+        catch [System.Net.WebException] {
+            if ($_.Exception.Response) { $_.Exception.Response.Dispose() }
         }
-        finally {
-            $client.Close()
-        }
+    }
+}
+
+$mutex = [System.Threading.Mutex]::new($false, "Local\MapleMonitorLaunch-$instanceId")
+$hasLock = $false
+$server = $null
+try {
+    try {
+        $hasLock = $mutex.WaitOne(15000)
+    }
+    catch [System.Threading.AbandonedMutexException] {
+        $hasLock = $true
+    }
+    if (-not $hasLock) { throw 'Another launcher is starting. Please try again.' }
+
+    $port = Find-RunningPort
+    if (-not $port) {
+        Add-Type -Path (Join-Path $serverRoot 'LocalStaticServer.cs') -ReferencedAssemblies 'System.dll','System.Web.Extensions.dll'
+        $server = [MapleMonitor.LocalStaticServer]::new($serverRoot, $instanceId)
+        $port = $server.Start(8765, 8775)
     }
 }
 finally {
-    $listener.Stop()
+    if ($hasLock) { $mutex.ReleaseMutex() }
+    $mutex.Dispose()
+}
+
+$url = "http://127.0.0.1:$port/index.html"
+try {
+    if ($server) {
+        Write-Host "Captcha detector is running at $url"
+        Write-Host 'Keep this window open. Press Ctrl+C or close it to stop.'
+    }
+    else {
+        Write-Host "Using the running Captcha detector at $url"
+    }
+    if (-not $NoBrowser) { Start-Process $url }
+    if ($server) {
+        while ($true) { Start-Sleep -Seconds 1 }
+    }
+}
+finally {
+    if ($server) { $server.Dispose() }
 }
