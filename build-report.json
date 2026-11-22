@@ -1,7 +1,7 @@
 {
-  "builtAt": "2026-11-22T11:59:00.775Z",
+  "builtAt": "2026-11-22T12:32:30.686Z",
   "mode": "minify-and-obfuscate",
-  "releaseSha256": "61156aa866b322e5ba40c2fec5e879cc5750ae98d771ee9325be7506724e146f",
+  "releaseSha256": "0b5882eb010782d493cccf72e9642c737d0a4acc052345178a5b8f5820d17f32",
   "files": [
     {
       "file": "index.html:inline-1",
@@ -15,8 +15,8 @@
     },
     {
       "file": "experience.js",
-      "sourceBytes": 30684,
-      "outputBytes": 20949
+      "sourceBytes": 32100,
+      "outputBytes": 21758
     },
     {
       "file": "detection-scheduler.js",
@@ -40,8 +40,8 @@
     },
     {
       "file": "remote-push.js",
-      "sourceBytes": 13254,
-      "outputBytes": 9644
+      "sourceBytes": 15925,
+      "outputBytes": 11621
     },
     {
       "file": "cv-loader.js",
@@ -174,14 +174,14 @@
     "opencv.js": "688ccf2a737aa677414f5f90b5f321138e5df7520b24611cb3d88e0617dd70ce",
     "assets/drop-monitor/catalog.json": "23a758b30998c352b793b354ebf48b99de61ff2c6d99a0ccc5794ed117c2a7ad",
     "assets/drop-monitor/platforms.json": "fcdd673f2d5bff5da489deb5326ffd30acf60ddfcc0bd5f29031a661b75ad95a",
-    "index.html": "bcd55362ba5161f26d3d6ae4feb8a016fa093becd92e68a9c5d1e74dc0d45c89",
+    "index.html": "6c456618a0f4e88a686223155bc0b9cefe1459e226364b0669ec9cf40d48e5c5",
     "theme.js": "579bfac8c5fc516cb656fdd3f987a18f6daea6b682cd25693063c59ade098a27",
-    "experience.js": "547879db643d6ff7dc5f887cd7a440ab0974782e6d82455d70c5533e3425e9c1",
+    "experience.js": "106fc7017045901218de45c0885437ed18212bc7c4b68cf93f94a55515d24f45",
     "detection-scheduler.js": "67254bd8c529fe61c71f7c5f4430ec02a2db48379d5f7cf8167eb174ec46d288",
     "dialog-validation.js": "c053b777b4a309e855ef66b89f23f63fb5f13f898e3798379ed8b67d02abe944",
     "speech-alerts.js": "88d5755809dccda6f1f2c63b524b1d1a89f86b7859d951ea91eb4ccc27c684a0",
     "alarm-sounds.js": "840d91f0eb97a51451356fc63e5c927d030359a9b454eae621d47f4ff5da9a5f",
-    "remote-push.js": "7014a93211a8dd5754136423763dec44c756cdf6cf070df67b1372e4f62d1d4e",
+    "remote-push.js": "3831bcc87d63cd413e537fec397604b2f134db80aa39d4562165da21bd452d14",
     "cv-loader.js": "b910e593971749b0a8f8d6685b0bf69e8be42f5e62e01ae0fe3edda5dd442ebf",
     "sound-ui.js": "3044ecea2ca58368ec0bd010d94442ddafe8a305881c65a23ce1daf7e6611b6e",
     "experience-ui.js": "a39cdeddf113df0f57b31a1ff3fd6d7e6a81b79c41c896f45dd8d44204134396",
@@ -241,14 +241,14 @@
     "assets/drop-monitor/platforms.fcdd673f2d5bff5d.json": "fcdd673f2d5bff5da489deb5326ffd30acf60ddfcc0bd5f29031a661b75ad95a",
     "assets/drop-monitor/platforms.fcdd673f2d5bff5d.json.br": "53cc13e08322f9eb423229daa7bc8fc84bc0e2db2e41e750887f2ddd54ebb23c",
     "assets/drop-monitor/platforms.fcdd673f2d5bff5d.json.gz": "c641b9a55c0d5f23307e8959a232686282696745a6dc3258904b1f596651b543",
-    "index.html": "a1f42ec38535e7060ce9e1489fd4c308f6605cb07e6ffb6d76e96a8875754704",
+    "index.html": "62fca700d561573b934be844ad18bcc4bb64fc6f3f163aeb284ddd7c90df120f",
     "theme.js": "a8d28a3bce908a7ab835aa9c2afe6eb6896f6bf3f69f89695996c87eae62946e",
-    "experience.js": "5c8059922aef9e1f895dedf1dfbea6c30dddf9cfb664d63a539df2713f7961cc",
+    "experience.js": "ca9f024da539e113d22bf8d3f040a68b7de36a5bcf593e854fd45d03996b5e6a",
     "detection-scheduler.js": "3cdb9fa6b572c206e278f7e5371944ad4b7d7cad8e93169abc643ffe64374606",
     "dialog-validation.js": "821c9d40578a2a641f83fd70ac37ce8e6d01cf2af06ad36124c43cb9fa76ea9c",
     "speech-alerts.js": "484c35dca22cb3aa1012f750ec5f0f9bb47aaf3b6c4dc99d3b147c22aa7cd71f",
     "alarm-sounds.js": "b79f3bd10f56cc86d642bc82c5b613fce49f54aef680fa728be5839711f6340f",
-    "remote-push.js": "c435afa8b525bfbee023646311085f63ddeb0654e0b5218df0fe0f0371cb40c4",
+    "remote-push.js": "3febb2af8a029da2cafd04bbb58e66a189ec223d9809550e305fc956f64a9d76",
     "cv-loader.js": "3ac3647780937d346b5122ca53172fba2b2e28a511780ab753925816fc234c5f",
     "sound-ui.js": "2383496c889f2faa8e1fe1c66fa646ad44b7fe2e2e2e8e81f19d0eadda2805eb",
     "experience-ui.js": "42484c83bf26e6ed017e9eaaabab894cd219ec96687c1c8728e18792ad1c90a6",

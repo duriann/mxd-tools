@@ -384,7 +384,7 @@
                   <input id="remotePushEnabled" type="checkbox" disabled />
                 </label>
               </div>
-              <p id="remotePushHint" class="settings-hint">请通过本机启动器打开页面以配置远程推送。</p>
+              <p id="remotePushHint" class="settings-hint">请在 HTTPS 网页或通过 Windows 启动器配置远程推送。</p>
               <div id="remotePushOptions" hidden>
                 <details class="settings-details">
                   <summary>提醒事件</summary>
@@ -410,7 +410,7 @@
                       <li>微信接收时关注「pushplus 推送加」服务号。QQ 接收时在「个人中心 → 渠道配置 → QQ 机器人」扫码绑定，发群时先在那里新增群配置。手机 App 登录同一账号并开启系统通知。</li>
                       <li>把 Token 粘贴到下方，勾选已绑定的渠道，再点该渠道的「发送测试」。普通短信的试发会扣费。</li>
                     </ol>
-                    <p>微信 ClawBot 扫码绑定后，给机器人发一条消息以激活。中国移动 5G 消息需在 PushPlus 绑定「新消息 ClawBot」的 Channel API Key。普通短信需绑定手机号并充值积分。<a href="https://www.pushplus.plus/doc/channel/" target="_blank" rel="noopener noreferrer">查看各渠道绑定步骤</a></p>
+                    <p>微信 ClawBot 扫码绑定后，给机器人发一条消息以激活。新消息 ClawBot 仅支持中国移动用户，需在 PushPlus 绑定 Channel API Key。普通短信需绑定手机号并充值积分。<a href="https://www.pushplus.plus/doc/channel/" target="_blank" rel="noopener noreferrer">查看各渠道绑定步骤</a></p>
                   </div>
                   <label class="settings-field remote-push-token">PushPlus Token
                     <input data-remote-token="pushplus" type="password" maxlength="256" autocomplete="off" spellcheck="false" />
@@ -440,7 +440,7 @@
                       <small class="settings-hint remote-push-result" role="status"></small>
                     </div>
                     <div class="remote-push-channel-row" data-remote-route="pushplus:cmcc">
-                      <label><input type="checkbox" />中国移动 5G 消息（需绑定）</label>
+                      <label><input type="checkbox" />新消息 ClawBot（中国移动）</label>
                       <button type="button">发送测试</button>
                       <small class="settings-hint remote-push-result" role="status"></small>
                     </div>
