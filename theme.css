@@ -64,7 +64,7 @@ input[type="checkbox"], progress { accent-color: var(--primary); }
 .monitor-app h2 { font-size: 15px; }
 .monitor-app p, .monitor-app small { color: var(--muted); }
 .monitor-app a { color: var(--blue); }
-.monitor-app button, .monitor-app select, .monitor-app input[type="number"], .settings-card input[type="text"] {
+.monitor-app button, .monitor-app select, .monitor-app input[type="number"], .settings-card :is(input[type="text"], input[type="password"]) {
   min-height: 36px;
   padding: 6px 10px;
   border: 1px solid var(--border);
@@ -131,6 +131,35 @@ main.app-shell { padding-bottom: 16px; }
 .app-nav a { padding-inline: 14px; color: var(--muted); font-weight: 650; }
 .app-nav a:hover { color: var(--text); background: var(--control); }
 .app-nav a[aria-current="page"] { color: var(--accent); background: color-mix(in srgb, var(--primary) 14%, var(--panel)); }
+.app-nav .support-link {
+  position: relative;
+  color: var(--accent);
+  background: color-mix(in srgb, var(--primary) 9%, var(--panel));
+}
+.app-nav .support-link:hover { background: color-mix(in srgb, var(--primary) 17%, var(--panel)); }
+.support-preview {
+  display: none;
+  position: absolute;
+  inset-block-start: 100%;
+  inset-inline-end: 0;
+  width: min(252px, calc(100vw - 24px));
+  padding-block-start: 7px;
+}
+.support-preview img {
+  display: block;
+  width: 100%;
+  max-height: min(58dvh, 400px);
+  padding: 6px;
+  border: 1px solid var(--panel-line);
+  border-radius: 11px;
+  background: var(--panel);
+  box-shadow: var(--shadow);
+  object-fit: contain;
+}
+@media (hover: hover) {
+  .support-link:hover .support-preview { display: block; }
+}
+.support-link:focus-visible .support-preview { display: block; }
 .screen { display: grid; gap: 16px; padding-block: 28px 24px; scroll-margin-top: 74px; }
 .screen > *, .monitor-grid > *, .monitor-session > * { min-width: 0; }
 .page-header, .panel, .card {
@@ -371,6 +400,8 @@ main.app-shell { padding-bottom: 16px; }
 .section-icon-platform::after { width: 7px; height: 7px; margin-top: -6px; border-right: 1.5px solid; border-bottom: 1.5px solid; transform: rotate(45deg); }
 .section-icon-sound::before { width: 2px; height: 16px; border-radius: 2px; background: currentColor; }
 .section-icon-sound::after { width: 2px; height: 9px; border-radius: 2px; box-shadow: -5px 0 currentColor, 5px 0 currentColor; }
+.section-icon-remote-push::before { width: 13px; height: 12px; margin-top: -2px; border: 1.5px solid; border-radius: 8px 8px 3px 3px; }
+.section-icon-remote-push::after { width: 4px; height: 2px; margin-top: 15px; border-radius: 2px; background: currentColor; }
 .section-icon-diagnostics::before { width: 15px; height: 11px; border-left: 1.5px solid; border-bottom: 1.5px solid; }
 .section-icon-diagnostics::after { width: 2px; height: 6px; margin: 1px 0 0 1px; background: currentColor; box-shadow: 4px -2px currentColor, -4px 1px currentColor; }
 .settings-options {
@@ -391,8 +422,8 @@ main.app-shell { padding-bottom: 16px; }
 .settings-options > .setting-row + .setting-row { border-top: 1px solid var(--panel-line); }
 .setting-row small { display: block; margin-top: 2px; font-size: 12px; font-weight: 400; }
 .setting-row:has(select) { grid-template-columns: minmax(0, 1fr) minmax(0, min(52%, 180px)); }
-.settings-card select, .settings-card input[type="text"] { width: 100%; min-width: 0; }
-#settingsScreen :is(select, input[type="number"], input[type="text"]) {
+.settings-card select, .settings-card :is(input[type="text"], input[type="password"]) { width: 100%; min-width: 0; }
+#settingsScreen :is(select, input[type="number"], input[type="text"], input[type="password"]) {
   min-height: 34px;
   border-color: var(--panel-line);
   background: var(--panel);
@@ -470,6 +501,47 @@ main.app-shell { padding-bottom: 16px; }
 .settings-details > small:empty { margin: 0; }
 .speech-selectors { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
 .settings-field { display: grid; min-width: 0; gap: 4px; font-size: 12px; color: var(--muted); }
+.settings-field input[type="number"] { width: 100%; min-width: 0; }
+.remote-push-guide {
+  margin-bottom: 10px;
+  padding: 8px 10px;
+  border-radius: 7px;
+  background: var(--panel-inset);
+  color: var(--muted);
+  font-size: 12px;
+}
+.remote-push-guide > a { font-weight: 650; }
+.remote-push-guide ol { margin: 6px 0 0; padding-inline-start: 1.4em; }
+.remote-push-guide li + li, .remote-push-guide p { margin-top: 4px; }
+.settings-remote-push .remote-push-setup-note { margin-top: 8px; }
+.remote-push-events {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 105px), 1fr));
+  gap: 8px 12px;
+  padding-block: 2px;
+}
+.remote-push-events > label, .remote-push-channel-row > label:has(input[type="checkbox"]) {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  cursor: pointer;
+  font-size: 13px;
+}
+.remote-push-events input, .remote-push-channel-row input[type="checkbox"] { margin: 0; }
+.remote-push-channel-list { margin-top: 8px; }
+.remote-push-channel-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 6px 8px;
+  padding-block: 6px;
+}
+.remote-push-channel-row + .remote-push-channel-row { border-top: 1px solid var(--panel-line); }
+.remote-push-channel-row :is(.remote-push-target, .remote-push-result) { grid-column: 1 / -1; }
+.remote-push-provider > .remote-push-target { margin-top: 8px; }
+.settings-remote-push .remote-push-result:empty { display: none; }
+.settings-remote-push .remote-push-result[data-state="success"] { color: var(--green); }
+.settings-remote-push .remote-push-result[data-state="error"] { color: var(--red); }
 .speech-fields { display: grid; gap: 7px; margin-top: 8px; }
 .speech-slider {
   display: grid;
@@ -657,8 +729,8 @@ main.app-shell { padding-bottom: 16px; }
 @media (max-width: 720px) {
   .app-shell { width: calc(100% - 24px); }
   .app-header-inner { grid-template-columns: minmax(0, 1fr); gap: 5px; }
-  .app-nav { padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); }
-  .app-nav a { padding-inline: 4px; }
+  .app-nav { padding: 0; display: grid; grid-template-columns: 4fr 4fr 5fr 3fr 5fr; }
+  .app-nav a { padding-inline: 2px; font-size: clamp(11px, 3.6vw, 14px); }
   .app-brand { font-size: 14px; }
   .screen { gap: 12px; padding-block-start: 14px; scroll-margin-top: 120px; }
   .page-header, .panel { padding: 12px; }
