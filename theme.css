@@ -632,6 +632,11 @@ main.app-shell { padding-bottom: 16px; }
 .exp-grid .value { font-size: clamp(16px, 2.4vw, 26px); line-height: 1.25; }
 #experienceChart { display: block; width: 100%; height: clamp(140px, 29vh, 320px); }
 .experience-chart-panel .hint, dialog .hint, dialog .toolbar { margin-top: 8px; }
+.experience-history { display: grid; gap: 8px; }
+.experience-history-tables { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 290px), 1fr)); gap: 10px 16px; }
+.experience-history-scroll { max-height: 290px; overflow: auto; }
+.experience-history-scroll .timing-table { margin-block: 0; font-size: 13px; }
+.experience-history-scroll .timing-table caption { padding-inline: 8px; }
 .monitor-app dialog {
   max-height: 92dvh;
   width: min(1100px, 94vw);
