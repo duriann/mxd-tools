@@ -625,6 +625,9 @@ main.app-shell { padding-bottom: 16px; }
 #experienceGoalStatus { color: var(--muted); font-variant-numeric: tabular-nums; }
 #experienceGoalStatus.goal-reached { color: var(--green); }
 #experienceGoalProgress { width: 110px; }
+.experience-low-form > :is(h2, p) { flex-basis: 100%; }
+.experience-low-form input { width: 105px; max-width: 36vw; min-width: 0; }
+.monitor-app #experienceLowStatus[data-alert="true"] { color: var(--yellow); }
 .goal-sound-settings { margin-left: auto; color: var(--blue); }
 .goal-sound-settings[open] { flex: 1 0 100%; margin-left: 0; }
 .exp-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
