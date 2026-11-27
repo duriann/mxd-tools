@@ -1,12 +1,12 @@
 {
-  "builtAt": "2026-11-27T08:44:35.416Z",
+  "builtAt": "2026-11-27T10:22:53.275Z",
   "mode": "minify-and-obfuscate",
-  "releaseSha256": "3939b5cddab2004b3ddc58f2d77f8b33a9c075bbbe5687f4ff412d021ef126f8",
+  "releaseSha256": "79a3d5b714bbdd1fc93a84835c0ddc605c934bc8531ff8d7d728a6ee22a31e04",
   "files": [
     {
       "file": "index.html:inline-1",
-      "sourceBytes": 57153,
-      "outputBytes": 35332
+      "sourceBytes": 57345,
+      "outputBytes": 35518
     },
     {
       "file": "theme.js",
@@ -16,7 +16,7 @@
     {
       "file": "experience.js",
       "sourceBytes": 32339,
-      "outputBytes": 21990
+      "outputBytes": 21978
     },
     {
       "file": "detection-scheduler.js",
@@ -26,22 +26,22 @@
     {
       "file": "dialog-validation.js",
       "sourceBytes": 13728,
-      "outputBytes": 9581
+      "outputBytes": 9597
     },
     {
       "file": "speech-alerts.js",
-      "sourceBytes": 12285,
-      "outputBytes": 10016
+      "sourceBytes": 13752,
+      "outputBytes": 11056
     },
     {
       "file": "alarm-sounds.js",
-      "sourceBytes": 13081,
-      "outputBytes": 12218
+      "sourceBytes": 14233,
+      "outputBytes": 13082
     },
     {
       "file": "remote-push.js",
       "sourceBytes": 15983,
-      "outputBytes": 11576
+      "outputBytes": 11591
     },
     {
       "file": "cv-loader.js",
@@ -50,8 +50,8 @@
     },
     {
       "file": "sound-ui.js",
-      "sourceBytes": 8881,
-      "outputBytes": 8029
+      "sourceBytes": 9229,
+      "outputBytes": 8299
     },
     {
       "file": "experience-history.js",
@@ -71,7 +71,7 @@
     {
       "file": "experience-preview.js",
       "sourceBytes": 6478,
-      "outputBytes": 6146
+      "outputBytes": 6162
     },
     {
       "file": "monitor-ui.js",
@@ -94,6 +94,21 @@
       "outputBytes": 16477
     },
     {
+      "file": "buff-reminder.js",
+      "sourceBytes": 2927,
+      "outputBytes": 2793
+    },
+    {
+      "file": "buff-catalog.js",
+      "sourceBytes": 4964,
+      "outputBytes": 5129
+    },
+    {
+      "file": "buff-ui.js",
+      "sourceBytes": 22651,
+      "outputBytes": 17080
+    },
+    {
       "file": "minimap-monitor.js",
       "sourceBytes": 8801,
       "outputBytes": 6265
@@ -111,17 +126,17 @@
     {
       "file": "drop-worker.js",
       "sourceBytes": 7316,
-      "outputBytes": 6415
+      "outputBytes": 6399
     },
     {
       "file": "drop-detector.js",
       "sourceBytes": 19788,
-      "outputBytes": 12252
+      "outputBytes": 12247
     },
     {
       "file": "minimap-reader.js",
       "sourceBytes": 11069,
-      "outputBytes": 6521
+      "outputBytes": 6527
     },
     {
       "file": "minimap-worker.js",
@@ -131,7 +146,7 @@
     {
       "file": "drop-map.js",
       "sourceBytes": 11056,
-      "outputBytes": 6999
+      "outputBytes": 7005
     },
     {
       "file": "sprite-atlas.js",
@@ -142,6 +157,11 @@
       "file": "auto-platform.js",
       "sourceBytes": 9115,
       "outputBytes": 6489
+    },
+    {
+      "file": "buff-worker.js",
+      "sourceBytes": 12703,
+      "outputBytes": 9207
     }
   ],
   "opencv": {
@@ -176,7 +196,7 @@
     }
   },
   "sources": {
-    "tools/build-release.cjs": "9e58026bb1e0567c53c8d43f81936af4850117b836958a460a2bc1c237bdac22",
+    "tools/build-release.cjs": "022d2b20f856e79681768f041e7d437fd6d1781fed15765a2bfeea2020f9c0b8",
     "tools/release-output.cjs": "7f366f71334abda32c0f26fc6729e392defbc5c1706f37009a7518ca85d95344",
     "tools/prepare-opencv.cjs": "56dbf0bd55f9a8401afff1a147fe1d6b01741f354896524e428d95928d1be75f",
     "package.json": "98a5f904f645f40b7a900e7c671ac7c1e742dd14a7e351d1d10e398326172a38",
@@ -184,16 +204,16 @@
     "opencv.js": "688ccf2a737aa677414f5f90b5f321138e5df7520b24611cb3d88e0617dd70ce",
     "assets/drop-monitor/catalog.json": "23a758b30998c352b793b354ebf48b99de61ff2c6d99a0ccc5794ed117c2a7ad",
     "assets/drop-monitor/platforms.json": "fcdd673f2d5bff5da489deb5326ffd30acf60ddfcc0bd5f29031a661b75ad95a",
-    "index.html": "a503164abe57cdc766f125a431171ad87804cbe105867f08e84d8274fb36ec55",
+    "index.html": "ba5ec33ab1b0bcea148e2174c341024399572598b8e15f1865782e61ac02ff60",
     "theme.js": "579bfac8c5fc516cb656fdd3f987a18f6daea6b682cd25693063c59ade098a27",
     "experience.js": "2dd1dc07a329df75db47c0e9ee64b2b50140d6852dfebcf00309c67eff8ff9ee",
     "detection-scheduler.js": "67254bd8c529fe61c71f7c5f4430ec02a2db48379d5f7cf8167eb174ec46d288",
     "dialog-validation.js": "c053b777b4a309e855ef66b89f23f63fb5f13f898e3798379ed8b67d02abe944",
-    "speech-alerts.js": "88d5755809dccda6f1f2c63b524b1d1a89f86b7859d951ea91eb4ccc27c684a0",
-    "alarm-sounds.js": "4ecb0ef782870c2f6aa69f55d67c0d0ccabf541671154615fb08e8723c57c68e",
+    "speech-alerts.js": "bbe811e1c455723220363b50e5708c6c3250ba5071ec17d20a0ae0f371e292b6",
+    "alarm-sounds.js": "2855e7a75cc5cddd285a14c820074e34941d009e1978634de9e9fe26307b0067",
     "remote-push.js": "7e99940dba4b125eeb5294436be3478c65496e04d269ddc348d8158d784e7cd3",
     "cv-loader.js": "b910e593971749b0a8f8d6685b0bf69e8be42f5e62e01ae0fe3edda5dd442ebf",
-    "sound-ui.js": "3044ecea2ca58368ec0bd010d94442ddafe8a305881c65a23ce1daf7e6611b6e",
+    "sound-ui.js": "4542b33ac519c560221c2c230d8e76cfe7a563616b688262d14b39d44880cf55",
     "experience-history.js": "33b7e0960a8d8d12b608ba702bf0dad7054f096dab6f836da88e2f2932782602",
     "experience-low-alert.js": "d8e6d50c45cabff25696def65a5dd2b0d433ae2516b7f5c84b2eaa7dd8f564a2",
     "experience-ui.js": "c88c62847c5cbe67a1f02be381581557a2e81306f463879499ce89dccc28b563",
@@ -202,6 +222,9 @@
     "fullpage.js": "c7473d3dc17c1c2d7cc3937815b68b70537134072f660f6c3dcee77536a6fcbf",
     "platform.js": "d0a059e6d18f92a4baa98350fe2220a03619bca5ac29d6dfdad0e1f52b4f108f",
     "drop-ui.js": "1d5ef723236c97003125552a678ddcd8413f8cc762c05b771c15071363d62c27",
+    "buff-reminder.js": "4cef0568f240ce9acb9c62071ccf8f6a8329bc8aa8f88f2bdf405026a64c9e34",
+    "buff-catalog.js": "79446683894a85238050495ac83c3c4a2ba9e196646f100a0886355da1bac959",
+    "buff-ui.js": "70447258d5594aac07a6604a414cd03a57fc4eb405db74092439041dc990cddf",
     "minimap-monitor.js": "24d3fd677bde7483e21d1e1f7defef731026718a57a894ff0b14571779dbfd84",
     "widget.js": "8802a67fbb19e269e077bf1424969fc44eff640060eb5ba339892c471ae15da5",
     "experience-worker.js": "145fb4189bfa2083881482a9fa71786a30bf110b33e9bcd29c24cbf631f19fce",
@@ -212,6 +235,7 @@
     "drop-map.js": "e20767f2ce7ff76e425e32162bb6ba8da79e7bd07f4bd95d7888118f1033e398",
     "sprite-atlas.js": "0696306ac0ba81b4366dd3e6c162c58dcbae2c30939abca9893820e94b54e587",
     "auto-platform.js": "ee7826aff5ec2661227351dd8646a4399a0e6bb6c6166c490258fe3a7e038aa1",
+    "buff-worker.js": "533a9631c7aeb15a5c2fb35089b9e33c4a951dfe31b3e8940f6b8e7eda67dbfb",
     "assets/drop-monitor/items.75ad88620a0de162.png": "75ad88620a0de162604bf984df6a21daa831d49fce5977843fad7ece561f8c9b",
     "assets/drop-monitor/items.9230781da01999ac.png": "9230781da01999ac09d3d01ddd28d172d577fdf58ccfbd082dbdfafbafb0ea6b",
     "assets/drop-monitor/items.001f44ea19689106.png": "001f44ea19689106a373cf5a1e54aaaf0ce99febec4ccb886f617c9f5049903b",
@@ -233,12 +257,68 @@
     "assets/drop-monitor/minimaps.cf110e371e34dcea.png": "cf110e371e34dcea5b508a6e3e340d05023ba0a53a019d08fc94318092f0c1e5",
     "assets/drop-monitor/minimaps.78cb988ab67fb5cf.png": "78cb988ab67fb5cff654726f070c811bf2fb192c318e58b85322c860e992b4a7",
     "assets/drop-monitor/minimaps.e3f0bb3a8e70b563.png": "e3f0bb3a8e70b563559ac7ea4fedca2e42bf05d9560769f6fab28c9a1d70296c",
-    "theme.css": "a042a52f3beb34c0200d45109b3f5ef62b139b0a676f75ac2b5ad0ab7865ddf2",
+    "theme.css": "e589b030e499dd1771704c60eed82db803856ede043008d76cc9b5f32d99ea59",
     "qrcode.jpg": "fb2b0770af2441f8ee4e9c3423ce87e2393b444161de87b7b16b7be668d5c422",
     "serve_detector.ps1": "8f4c946a4789d8949538f7ec2a66558e7d0e742460e78c325e2f3bbebb87d92e",
     "LocalStaticServer.cs": "ea11dc4aa8dd160ed33436879c614b7acde7af210dc277b578d5a67d546c7d51",
     "双击我打开就行.bat": "b54056ede23fc00fa65a718da26dc334ba921779b70f88581e4433240dd26f47",
-    ".nojekyll": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ".nojekyll": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "assets/buff-reminder/1001003.png": "f12dd6ec2a8d84aa3027c8fdf15ccdc2c214be94fcadbea93f3eae75423382ef",
+    "assets/buff-reminder/1101004.png": "b70f14a96985ef9c4257cc25f484301e445c7beedec51765d37960db51cef882",
+    "assets/buff-reminder/1101005.png": "ea2d9d7fbea990df254ecbaeb22fbcc71733c389411276103a64e38573a6fd5a",
+    "assets/buff-reminder/1101006.png": "aba9b6dc3f7619905bc8c08ab116a0659ced7341e3784099b07964522beb7d48",
+    "assets/buff-reminder/1101007.png": "fdff012ed634d300e898ffc1acd853f92ccc24210827033af2512004ceb3622e",
+    "assets/buff-reminder/1111002.png": "8a52ee60d55276dabc02fe6583094ba5922d5559840a8727fe83c4eae112ed1a",
+    "assets/buff-reminder/1121000.png": "ded069a1b3b0a049e229fd0daa4a942a9454ac3ca8e528bea4dcb0b2538c14c3",
+    "assets/buff-reminder/1201005.png": "3900b01beb3ad9d9f4a180ab6d2ead6102b08f157fcc3932bfb53682aba9542c",
+    "assets/buff-reminder/1211003.png": "73ab74f864938bc55fa35bf525e68c3589cdb6b963664b153859d8476a9cc228",
+    "assets/buff-reminder/1211004.png": "77b42573934f1107ea4454ac5f161a793d043159789e83656ba21a55aadd6a95",
+    "assets/buff-reminder/1211005.png": "82735db5d30a0aee017615f9eb26d5cd164d851d3c8a2f7e227c621f6c7b5aa8",
+    "assets/buff-reminder/1211006.png": "ee8e876950cc547ffb97bca74939c382f9dc101067e42d3a32957c828e6b61e7",
+    "assets/buff-reminder/1211007.png": "bd6235d6131ebf0f7d94407308600999905855cf5435cec1a56b4ba447784ae8",
+    "assets/buff-reminder/1211008.png": "f01ca274397a123e739404106d1a6f6a1f5222d716e1845861d2aec21181154e",
+    "assets/buff-reminder/1301004.png": "e75f8dc09e8d57235db1b9aef3acb75d09f8512f9a51c76f97bac48a07f7f354",
+    "assets/buff-reminder/1301005.png": "4f4f4b0ee35898d03a29755015160b03b5da0d7bc95f21eee45645d084599895",
+    "assets/buff-reminder/1301006.png": "2db46039a2e8cd082dd6fcbb54a327e667f6d1749a16f6184f0833ffbffe2235",
+    "assets/buff-reminder/1301007.png": "de4730d9a9458493c1d2149a70eb25a73b2f7760fc66da0bea825edc76a01227",
+    "assets/buff-reminder/1311008.png": "0734e645bd9d1155e57d8d7696ea6ab99cff12f07251b4a0ed7e935ce4ef929a",
+    "assets/buff-reminder/2001002.png": "17dd8032df787c0b42ae3ca8331d79f6aafb6622353518346994f9e1d7f97d46",
+    "assets/buff-reminder/2001003.png": "aa6936d4b4faaef7b532ad2e3f2b841d70199bd0d8cc2cea11788b203cbacac7",
+    "assets/buff-reminder/2101001.png": "d7b0159f376298d08e1e83e99bf235d14e4dd4873bcf6ac85a246f895a438629",
+    "assets/buff-reminder/2111005.png": "32b5cf1d19bf92c2ead32f94d1dfb9d8c6f1387366fcafe79734c0852e9a7290",
+    "assets/buff-reminder/2301003.png": "a300b9ada1807b55d9065d3843d3c7849076a5afe2beeb28e72871cb1e2df88e",
+    "assets/buff-reminder/2301004.png": "7117caefc09d8d50e922f2d4a7cee8e7728e22f5b262d1ddb0a5d9061254348b",
+    "assets/buff-reminder/2311002.png": "44f084d2a4f21ec9909ff7c1dd3e374c838569b0654c889efa934f21320e91dc",
+    "assets/buff-reminder/2311003.png": "ed96c1373bc8bdfade376de71e42f58ba7b59443c74ac96ef8c052899c991bb2",
+    "assets/buff-reminder/2311006.png": "fc1e5e5aa19629072f088b4f715c912021226a9fb1c50d08faaf28ae5795ea4d",
+    "assets/buff-reminder/2321005.png": "7b283136913290e054881d3f5907371c01df7feedae3fb0ca1cd74aa96da523f",
+    "assets/buff-reminder/3001003.png": "6ddc3ab78784f8c14451ee5290291697f7552df01d439af8931dfaf2541c3a83",
+    "assets/buff-reminder/3101002.png": "d687d40bac31a916f1912bc18ff8d2991cd2cf87cd73ac2506928ab5cc925221",
+    "assets/buff-reminder/3101004.png": "63bf9ff0d51946e3f3da970771d679cb1df352624573c8a8987659dc6a3abd8d",
+    "assets/buff-reminder/3111002.png": "b0e11224723d41818a313b7ddc7d7b1b483bd102784567e4173d733048bdf79b",
+    "assets/buff-reminder/3111005.png": "9b813168b28e6f58fbc19d68fd58eda8c9ace0905154ebaa3d0d24181285f6c6",
+    "assets/buff-reminder/3121002.png": "dadbf5312bf752cbbc6e5e256ac562e8750e283d4f0273fb1c77bc4ba603c871",
+    "assets/buff-reminder/3201002.png": "402260b12702ef3af3f03fbac4d54e05a6401056550aa218500de0084a3d3a2a",
+    "assets/buff-reminder/3211005.png": "c36a022fd96020fdbea0aacd01456b88e07ab83ef5c7f4096d941b2b27d1574e",
+    "assets/buff-reminder/4001003.png": "2aac820453a60586170aa19ef425e5d4a40049888a0bbc536bf69c80ad191b0c",
+    "assets/buff-reminder/4101003.png": "da3da9bf6576f43a8cdc16aa92c71d5a583c1d5ed91c91582922697ba7f878cf",
+    "assets/buff-reminder/4101004.png": "4e9357af31b46ad124e61852399b086b0421b28bd6d804540f71cb490637f02e",
+    "assets/buff-reminder/4111001.png": "cf82a7a3592b8dcccc0cf6eca5f388ecfb925118ce304400f02b93b924796580",
+    "assets/buff-reminder/4111002.png": "9014013db0404fee9810956af59ba5a250cdf12198e8b630f06f31d0023eb119",
+    "assets/buff-reminder/4201002.png": "2b9fe66a76f6361558e3b6c661f38bce09eb2143a8ba13f4010abc9d7bde96b3",
+    "assets/buff-reminder/4211003.png": "a7de143b21e1d6ad6340fe2bf820bbf4f892cf140061f69877d6d684afa8063b",
+    "assets/buff-reminder/4211005.png": "0377c78434f41df3ba64404c4d7f855f63f6eaac1ddc79a93dd4c0735ade9af7",
+    "assets/buff-reminder/5001005.png": "0ed96e775fedd6188cbffd30356f9013780e1252295335a10d01f05f7ae2ab07",
+    "assets/buff-reminder/5101006.png": "ba19e2429d5c172b9f4f9627c48eb53b51cfa460f0581079cedbdfbf1f8122a0",
+    "assets/buff-reminder/5101007.png": "44dcb38b61a833aea63d42a0f22f1b68983fb874d6bc3afc5818106ca82b6f3a",
+    "assets/buff-reminder/5110001.png": "50473e99ee3698c0b3d2df84f1f64c2bdfde142f9b10c0241d75754ebed128d4",
+    "assets/buff-reminder/5111005.png": "67a62b785ae1bd7d74adcc49ece98f1d4ee7caa714bd11e4096d5ce75950bc10",
+    "assets/buff-reminder/5121009.png": "7f2d76b4e170f8d0f72b5dd6080a0ea86cd50ec87c43b5a19797f538be251b07",
+    "assets/buff-reminder/5121010.png": "15ee1844883a909f2c8321521ec5be129b8c0dc96adcfae11bef184ffd1051ad",
+    "assets/buff-reminder/5201003.png": "9cdf4ca395d4aa2afe49e3309dd1ad0d5eaa7ea04225f555e0f0ffc3da9a1c90",
+    "assets/buff-reminder/5201005.png": "91e8ab8354b781cddbac5062e5fd350056ecf24ef99a5642150fa37ea5e00410",
+    "assets/buff-reminder/5211001.png": "8187499260a5d3c668cec3a79c5948d88498bc4627ed32fa532a0f1c0e0e193b",
+    "assets/buff-reminder/5211002.png": "0dd43965b9ee0474ffb1d55b0f805fcf536430e873f5502bbcaa3b704482256d"
   },
   "artifacts": {
     "opencv-runtime.688ccf2a737aa677.js": "86c3447a7299781339833dcdf2f0889a69153f0af210ebafa1f4e4720848a6d2",
@@ -253,34 +333,38 @@
     "assets/drop-monitor/platforms.fcdd673f2d5bff5d.json": "fcdd673f2d5bff5da489deb5326ffd30acf60ddfcc0bd5f29031a661b75ad95a",
     "assets/drop-monitor/platforms.fcdd673f2d5bff5d.json.br": "53cc13e08322f9eb423229daa7bc8fc84bc0e2db2e41e750887f2ddd54ebb23c",
     "assets/drop-monitor/platforms.fcdd673f2d5bff5d.json.gz": "c641b9a55c0d5f23307e8959a232686282696745a6dc3258904b1f596651b543",
-    "index.html": "60591137fd927e4cc281fd5637b26bbdcdaf50994e3b60f6fc6f889ba9dc2938",
-    "theme.js": "e96bee59ce17c9eaec155958a59cb274c96cfbf31bcaa13a9f773713c426da1e",
-    "experience.js": "3f80e752ea44d0c30f43443ae164da3717f8a578f12f6a2ef00e3efbd290265e",
-    "detection-scheduler.js": "100b9bd1cee9dc7b36ce4ded9db561b9e21c9fd47f56e3902016cbddd05694d7",
-    "dialog-validation.js": "1083aab442fbd22a661a4a97032954d746cefc51141df65a5c81edbbf3b6158b",
-    "speech-alerts.js": "5b1e270d7aec4e75c4cbbffc533814c532b4a07e71b45a632da44f20d9adda07",
-    "alarm-sounds.js": "882654e42c3502c6429c9af1e6867af04fe742922d885f276b7970caebd14366",
-    "remote-push.js": "acd68b7635d0edcc21b2a6b44f7a2ba59f4cb40cbd7ceca37458b69622e56398",
-    "cv-loader.js": "0978667e82edf183b12ed7f0a5d338c575dfd88b23852dd443f20d2e06d09650",
-    "sound-ui.js": "34e635f320349939d14c0ee89389b3cb4e849b6afe009174fe7b44821fb5aa8f",
-    "experience-history.js": "7255be865fc49f7e0db771a7b9f36c11b77fd3107346edecce6fb7b5e6855afa",
-    "experience-low-alert.js": "e2a0ebeb8f850698ef5482433d17a84cd0d3de9cd7821c46bca1a69b6d6e8db5",
-    "experience-ui.js": "94eabc858d7b17ad3e254fd8ebd6d69f9ab6db685005ebe0c468a612f9de2047",
-    "experience-preview.js": "82312de3fb4fb46e41ed8ae912459a532794b1b72da7e0ce225cd65af5f7f1dc",
-    "monitor-ui.js": "a9ec178381c5df6e69370091b1b02169e373d9707d19baa43de0b4b63df88218",
-    "fullpage.js": "9bd932f2baed0778afa527488c9c899aaa8414c5abcd0a6eccf1e3dc6f9597b0",
-    "platform.js": "f52d57f882ad23c32991166800893ddf8559cf978eeacfcec7f253193f5bff71",
-    "drop-ui.js": "6b31ee89140b200b0d74a6e8f03e7690139b126b1ccd70b4de3641df373da900",
-    "minimap-monitor.js": "365a4f1af3999dd34080151def2a2b27de4baa797b9100a4f34995a30568fcc0",
-    "widget.js": "571e0b75b7e56cd886bc712359d04d773439242d4e113779c7e9eaab3718d11e",
-    "experience-worker.js": "d0f7815a07ef774bc72ec21ac477e858745bafa32eda5b3bb1f9b342271d05d3",
-    "drop-worker.js": "a94ef45ee3555ded1e485a8b32f0331bf9c5d54c62d918de1e4a026c5181255d",
-    "drop-detector.js": "5e3c754ed2205b14ff7d5fa68183eace75b849360ad1e3389e9c6dcf8909d4c3",
-    "minimap-reader.js": "3d21a9e4106514f36fbdc2fdb10bdc08eeb06a8ee356d47a67d404e2174deebf",
-    "minimap-worker.js": "ccb7f677beb71fb7835e7b2a367ef811771c97ad9d0cebf7e494dc2794822304",
-    "drop-map.js": "c64cef398789eb8386e96e6389a3675f76283eec36ba82ea9f4e3f42977e202a",
-    "sprite-atlas.js": "1acf400d7c21eb566f65ae4d5db784b26dd2380b766fecd47a82ef6adb390172",
-    "auto-platform.js": "04c0beb5b15c5acff33a957ff856b449b95852b088adda3cc2e6f604c6df493d",
+    "index.html": "3c40c2855d00e5c42232311e22495d2b11ac00cdcfa45ede0931411ee0779b90",
+    "theme.js": "53418abc2278c1dca7260f8a496713f20ce18b747cee007144209ba1990291e4",
+    "experience.js": "43cf5139f4c7334d1815a65e2082db174853c047ff9a45b882410eff15793dc6",
+    "detection-scheduler.js": "4fc5e87154d083d49c8dda780b1e333372469e3d5d8adb6b451e18b3b4b564e2",
+    "dialog-validation.js": "e00734fedbe59377b7c9a46d1dd290d4236a3909e61b2a73deaf744c4dfedf17",
+    "speech-alerts.js": "555cf20f12c9ce10fde0352c0bbdc3b97670502d02a19329ea0c6a99501936f1",
+    "alarm-sounds.js": "9a59384e180cbd97bf1b2e100f8df5b06f737ce1fffb52439079d58ed75ec26c",
+    "remote-push.js": "adf6f2fe4f4781d39f2489eb1edb8a6fee33ad3ebebf5161dcea3d13425b0d87",
+    "cv-loader.js": "d008c8dab002f9d473dbdb17fabf03e6c8c9591f39c39a6e5d5984e266f45214",
+    "sound-ui.js": "1b7f4bbecf500ef2c04d644141880fdb9d2056d211e986c4807f8180c8119f07",
+    "experience-history.js": "dcb44c2ac273733c3d3e5ef0e176a0ad8dc43d95d5ebc40362757c4a7ed9d242",
+    "experience-low-alert.js": "8f753e28ed4881f26d4040ed3eb51528b3d897f64f7eb17f372f3521dae7d0c8",
+    "experience-ui.js": "8c6fc41891d6344b532c9ca8aa8425094203ff0355a9a6b0a583a1ede82cf710",
+    "experience-preview.js": "9e9cadfe9d26ba06440768eefe227fbbf8ade17d1ed5df25b6afd6bbfef39287",
+    "monitor-ui.js": "4d3ad5040d4a94fc19a0f960d1a05d787eed842972f764ebc113637ea07d54ed",
+    "fullpage.js": "0133a942de38e6e73c2624eeb0d36234783eeae531d520aa707997f86b034162",
+    "platform.js": "f8f83c1869ca337e7ee3f19fcfa8a081bb296de4117928c0c84c117a96e4047a",
+    "drop-ui.js": "ceac9d0ce2203ce6e476f62b88ab9bb09164a6583383254260fc017cce1a9e13",
+    "buff-reminder.js": "b991cf0d08a767ed2130324941d6698e78cc64372d5e64b621c65d60979bc417",
+    "buff-catalog.js": "541177ebcee3be1302de93ca6b8f2e0186415aa7e1fdfbcbc4602a92b6912d6f",
+    "buff-ui.js": "5bfd982fb897e26f881348591557e0964663ddf44841cfe9de83fb080dbc8125",
+    "minimap-monitor.js": "f1a1f714ff5443ab2c8f6092402862745fa21dd481f8a51bd1c587e3a30d474f",
+    "widget.js": "cab310b2c187ab396ff419d40d4c5e544c51a18a6b821b064e81b8a614664039",
+    "experience-worker.js": "d3b8da302d6f3b903553fca804d24500b380abfc373d1e3cff210bc9f61b5486",
+    "drop-worker.js": "9277bb03583e6eb53be6303ecc0bd943003340db1e082404cf039d431aeca91b",
+    "drop-detector.js": "d3c7f49c98486dc52f6a701c30d3b0ca6158f1e268dc432d46b9846f95aafbe3",
+    "minimap-reader.js": "b2bfc15872cdf231660c9bd5e943fea3d31c57a08be69f207f9c1075d8028273",
+    "minimap-worker.js": "9cce770f25a57703f226f8fe34c13575ce3c2249d2cb081f41b7eda8389de1ae",
+    "drop-map.js": "37252b749748f587dda32e0b78205d1cd2f722b2e590b39f32d64b9b64ac14ed",
+    "sprite-atlas.js": "9c246388ceff019f6c55b24b4d67451b8ab3a751d42605ad1aae42c76f73dbc6",
+    "auto-platform.js": "d2f0b1ad2eb28429b515293ef8a4e31a3bea5bacb43c8b96b67310e3d775ce0c",
+    "buff-worker.js": "c07c78873f0959f2b1f5ff4095e758cb559b9d328eb6f49847e5243b61ebbfe6",
     "assets/drop-monitor/items.75ad88620a0de162.png": "75ad88620a0de162604bf984df6a21daa831d49fce5977843fad7ece561f8c9b",
     "assets/drop-monitor/items.9230781da01999ac.png": "9230781da01999ac09d3d01ddd28d172d577fdf58ccfbd082dbdfafbafb0ea6b",
     "assets/drop-monitor/items.001f44ea19689106.png": "001f44ea19689106a373cf5a1e54aaaf0ce99febec4ccb886f617c9f5049903b",
@@ -302,11 +386,67 @@
     "assets/drop-monitor/minimaps.cf110e371e34dcea.png": "cf110e371e34dcea5b508a6e3e340d05023ba0a53a019d08fc94318092f0c1e5",
     "assets/drop-monitor/minimaps.78cb988ab67fb5cf.png": "78cb988ab67fb5cff654726f070c811bf2fb192c318e58b85322c860e992b4a7",
     "assets/drop-monitor/minimaps.e3f0bb3a8e70b563.png": "e3f0bb3a8e70b563559ac7ea4fedca2e42bf05d9560769f6fab28c9a1d70296c",
-    "theme.css": "a042a52f3beb34c0200d45109b3f5ef62b139b0a676f75ac2b5ad0ab7865ddf2",
+    "theme.css": "e589b030e499dd1771704c60eed82db803856ede043008d76cc9b5f32d99ea59",
     "qrcode.jpg": "fb2b0770af2441f8ee4e9c3423ce87e2393b444161de87b7b16b7be668d5c422",
     "serve_detector.ps1": "8f4c946a4789d8949538f7ec2a66558e7d0e742460e78c325e2f3bbebb87d92e",
     "LocalStaticServer.cs": "ea11dc4aa8dd160ed33436879c614b7acde7af210dc277b578d5a67d546c7d51",
     "双击我打开就行.bat": "b54056ede23fc00fa65a718da26dc334ba921779b70f88581e4433240dd26f47",
-    ".nojekyll": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ".nojekyll": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "assets/buff-reminder/1001003.png": "f12dd6ec2a8d84aa3027c8fdf15ccdc2c214be94fcadbea93f3eae75423382ef",
+    "assets/buff-reminder/1101004.png": "b70f14a96985ef9c4257cc25f484301e445c7beedec51765d37960db51cef882",
+    "assets/buff-reminder/1101005.png": "ea2d9d7fbea990df254ecbaeb22fbcc71733c389411276103a64e38573a6fd5a",
+    "assets/buff-reminder/1101006.png": "aba9b6dc3f7619905bc8c08ab116a0659ced7341e3784099b07964522beb7d48",
+    "assets/buff-reminder/1101007.png": "fdff012ed634d300e898ffc1acd853f92ccc24210827033af2512004ceb3622e",
+    "assets/buff-reminder/1111002.png": "8a52ee60d55276dabc02fe6583094ba5922d5559840a8727fe83c4eae112ed1a",
+    "assets/buff-reminder/1121000.png": "ded069a1b3b0a049e229fd0daa4a942a9454ac3ca8e528bea4dcb0b2538c14c3",
+    "assets/buff-reminder/1201005.png": "3900b01beb3ad9d9f4a180ab6d2ead6102b08f157fcc3932bfb53682aba9542c",
+    "assets/buff-reminder/1211003.png": "73ab74f864938bc55fa35bf525e68c3589cdb6b963664b153859d8476a9cc228",
+    "assets/buff-reminder/1211004.png": "77b42573934f1107ea4454ac5f161a793d043159789e83656ba21a55aadd6a95",
+    "assets/buff-reminder/1211005.png": "82735db5d30a0aee017615f9eb26d5cd164d851d3c8a2f7e227c621f6c7b5aa8",
+    "assets/buff-reminder/1211006.png": "ee8e876950cc547ffb97bca74939c382f9dc101067e42d3a32957c828e6b61e7",
+    "assets/buff-reminder/1211007.png": "bd6235d6131ebf0f7d94407308600999905855cf5435cec1a56b4ba447784ae8",
+    "assets/buff-reminder/1211008.png": "f01ca274397a123e739404106d1a6f6a1f5222d716e1845861d2aec21181154e",
+    "assets/buff-reminder/1301004.png": "e75f8dc09e8d57235db1b9aef3acb75d09f8512f9a51c76f97bac48a07f7f354",
+    "assets/buff-reminder/1301005.png": "4f4f4b0ee35898d03a29755015160b03b5da0d7bc95f21eee45645d084599895",
+    "assets/buff-reminder/1301006.png": "2db46039a2e8cd082dd6fcbb54a327e667f6d1749a16f6184f0833ffbffe2235",
+    "assets/buff-reminder/1301007.png": "de4730d9a9458493c1d2149a70eb25a73b2f7760fc66da0bea825edc76a01227",
+    "assets/buff-reminder/1311008.png": "0734e645bd9d1155e57d8d7696ea6ab99cff12f07251b4a0ed7e935ce4ef929a",
+    "assets/buff-reminder/2001002.png": "17dd8032df787c0b42ae3ca8331d79f6aafb6622353518346994f9e1d7f97d46",
+    "assets/buff-reminder/2001003.png": "aa6936d4b4faaef7b532ad2e3f2b841d70199bd0d8cc2cea11788b203cbacac7",
+    "assets/buff-reminder/2101001.png": "d7b0159f376298d08e1e83e99bf235d14e4dd4873bcf6ac85a246f895a438629",
+    "assets/buff-reminder/2111005.png": "32b5cf1d19bf92c2ead32f94d1dfb9d8c6f1387366fcafe79734c0852e9a7290",
+    "assets/buff-reminder/2301003.png": "a300b9ada1807b55d9065d3843d3c7849076a5afe2beeb28e72871cb1e2df88e",
+    "assets/buff-reminder/2301004.png": "7117caefc09d8d50e922f2d4a7cee8e7728e22f5b262d1ddb0a5d9061254348b",
+    "assets/buff-reminder/2311002.png": "44f084d2a4f21ec9909ff7c1dd3e374c838569b0654c889efa934f21320e91dc",
+    "assets/buff-reminder/2311003.png": "ed96c1373bc8bdfade376de71e42f58ba7b59443c74ac96ef8c052899c991bb2",
+    "assets/buff-reminder/2311006.png": "fc1e5e5aa19629072f088b4f715c912021226a9fb1c50d08faaf28ae5795ea4d",
+    "assets/buff-reminder/2321005.png": "7b283136913290e054881d3f5907371c01df7feedae3fb0ca1cd74aa96da523f",
+    "assets/buff-reminder/3001003.png": "6ddc3ab78784f8c14451ee5290291697f7552df01d439af8931dfaf2541c3a83",
+    "assets/buff-reminder/3101002.png": "d687d40bac31a916f1912bc18ff8d2991cd2cf87cd73ac2506928ab5cc925221",
+    "assets/buff-reminder/3101004.png": "63bf9ff0d51946e3f3da970771d679cb1df352624573c8a8987659dc6a3abd8d",
+    "assets/buff-reminder/3111002.png": "b0e11224723d41818a313b7ddc7d7b1b483bd102784567e4173d733048bdf79b",
+    "assets/buff-reminder/3111005.png": "9b813168b28e6f58fbc19d68fd58eda8c9ace0905154ebaa3d0d24181285f6c6",
+    "assets/buff-reminder/3121002.png": "dadbf5312bf752cbbc6e5e256ac562e8750e283d4f0273fb1c77bc4ba603c871",
+    "assets/buff-reminder/3201002.png": "402260b12702ef3af3f03fbac4d54e05a6401056550aa218500de0084a3d3a2a",
+    "assets/buff-reminder/3211005.png": "c36a022fd96020fdbea0aacd01456b88e07ab83ef5c7f4096d941b2b27d1574e",
+    "assets/buff-reminder/4001003.png": "2aac820453a60586170aa19ef425e5d4a40049888a0bbc536bf69c80ad191b0c",
+    "assets/buff-reminder/4101003.png": "da3da9bf6576f43a8cdc16aa92c71d5a583c1d5ed91c91582922697ba7f878cf",
+    "assets/buff-reminder/4101004.png": "4e9357af31b46ad124e61852399b086b0421b28bd6d804540f71cb490637f02e",
+    "assets/buff-reminder/4111001.png": "cf82a7a3592b8dcccc0cf6eca5f388ecfb925118ce304400f02b93b924796580",
+    "assets/buff-reminder/4111002.png": "9014013db0404fee9810956af59ba5a250cdf12198e8b630f06f31d0023eb119",
+    "assets/buff-reminder/4201002.png": "2b9fe66a76f6361558e3b6c661f38bce09eb2143a8ba13f4010abc9d7bde96b3",
+    "assets/buff-reminder/4211003.png": "a7de143b21e1d6ad6340fe2bf820bbf4f892cf140061f69877d6d684afa8063b",
+    "assets/buff-reminder/4211005.png": "0377c78434f41df3ba64404c4d7f855f63f6eaac1ddc79a93dd4c0735ade9af7",
+    "assets/buff-reminder/5001005.png": "0ed96e775fedd6188cbffd30356f9013780e1252295335a10d01f05f7ae2ab07",
+    "assets/buff-reminder/5101006.png": "ba19e2429d5c172b9f4f9627c48eb53b51cfa460f0581079cedbdfbf1f8122a0",
+    "assets/buff-reminder/5101007.png": "44dcb38b61a833aea63d42a0f22f1b68983fb874d6bc3afc5818106ca82b6f3a",
+    "assets/buff-reminder/5110001.png": "50473e99ee3698c0b3d2df84f1f64c2bdfde142f9b10c0241d75754ebed128d4",
+    "assets/buff-reminder/5111005.png": "67a62b785ae1bd7d74adcc49ece98f1d4ee7caa714bd11e4096d5ce75950bc10",
+    "assets/buff-reminder/5121009.png": "7f2d76b4e170f8d0f72b5dd6080a0ea86cd50ec87c43b5a19797f538be251b07",
+    "assets/buff-reminder/5121010.png": "15ee1844883a909f2c8321521ec5be129b8c0dc96adcfae11bef184ffd1051ad",
+    "assets/buff-reminder/5201003.png": "9cdf4ca395d4aa2afe49e3309dd1ad0d5eaa7ea04225f555e0f0ffc3da9a1c90",
+    "assets/buff-reminder/5201005.png": "91e8ab8354b781cddbac5062e5fd350056ecf24ef99a5642150fa37ea5e00410",
+    "assets/buff-reminder/5211001.png": "8187499260a5d3c668cec3a79c5948d88498bc4627ed32fa532a0f1c0e0e193b",
+    "assets/buff-reminder/5211002.png": "0dd43965b9ee0474ffb1d55b0f805fcf536430e873f5502bbcaa3b704482256d"
   }
 }

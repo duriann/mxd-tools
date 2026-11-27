@@ -64,7 +64,8 @@ input[type="checkbox"], progress { accent-color: var(--primary); }
 .monitor-app h2 { font-size: 15px; }
 .monitor-app p, .monitor-app small { color: var(--muted); }
 .monitor-app a { color: var(--blue); }
-.monitor-app button, .monitor-app select, .monitor-app input[type="number"], .settings-card :is(input[type="text"], input[type="password"]) {
+.monitor-app button, .monitor-app select, .monitor-app input[type="number"], .settings-card :is(input[type="text"], input[type="password"]),
+.buff-dialog :is(input[type="text"], input[type="search"]) {
   min-height: 36px;
   padding: 6px 10px;
   border: 1px solid var(--border);
@@ -140,6 +141,7 @@ main.app-shell { padding-bottom: 16px; }
 .support-preview {
   display: none;
   position: absolute;
+  pointer-events: none;
   inset-block-start: 100%;
   inset-inline-end: 0;
   width: min(252px, calc(100vw - 24px));
@@ -608,6 +610,93 @@ main.app-shell { padding-bottom: 16px; }
 .platform-thresholds input { width: 100%; min-width: 0; }
 #alarmSoundType { min-width: 0; max-width: 100%; }
 .experience-meta { display: flex; flex: 1 0 100%; flex-wrap: wrap; gap: 4px 16px; font-size: 13px; }
+.buff-panel, .buff-dialog, .buff-fields, .buff-add-form { display: grid; gap: 12px; }
+.buff-panel-header, .buff-dialog-header { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+.buff-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 220px), 1fr)); gap: 10px; }
+.monitor-app button.buff-card { display: grid; grid-template-columns: 40px minmax(0, 1fr); gap: 3px 10px; align-items: center; padding: 12px; text-align: left; }
+.buff-card img, .buff-identity img { object-fit: contain; image-rendering: pixelated; }
+.buff-card img { grid-row: span 2; }
+.buff-card strong { overflow-wrap: anywhere; }
+.buff-card small { color: var(--muted); font-variant-numeric: tabular-nums; }
+.monitor-app .buff-card[data-state="active"] { border-color: var(--green); }
+.monitor-app .buff-card[data-state="warning"] { border-color: var(--yellow); }
+.monitor-app .buff-card[data-state="ended"] small { color: var(--danger, var(--yellow)); }
+.monitor-app .buff-dialog { width: min(100% - 24px, 470px); max-height: calc(100dvh - 24px); overflow: auto; }
+.monitor-app .buff-dialog:not([open]) { display: none; }
+.buff-identity { display: grid; grid-template-columns: auto minmax(0, 1fr); align-items: center; gap: 4px 12px; }
+.buff-identity > span { grid-column: 2; }
+.buff-identity label, .buff-add-form label { display: grid; gap: 4px; }
+.buff-fields { margin: 0; min-width: 0; padding: 8px 12px 12px; border: 1px solid var(--border); border-radius: 10px; }
+.buff-fields legend { padding-inline: 4px; font-weight: 650; }
+.buff-option { display: grid; align-items: center; grid-template-columns: minmax(0, 1fr) auto auto; gap: 8px; }
+.buff-option input[role="switch"] {
+  appearance: none;
+  grid-column: 3;
+  width: 34px;
+  height: 20px;
+  margin: 0;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  background: var(--control);
+  cursor: pointer;
+}
+.buff-option input[role="switch"]::before {
+  display: block;
+  width: 14px;
+  height: 14px;
+  margin: 2px;
+  border-radius: 50%;
+  background: var(--muted);
+  content: '';
+}
+.buff-option input[role="switch"]:checked { background: var(--primary); border-color: var(--primary); }
+.buff-option input[role="switch"]:checked::before { background: #fff; transform: translateX(14px); }
+.buff-option input[role="switch"]:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.buff-option input[type="number"] { width: 72px; }
+.buff-add-form input { min-width: 0; width: 100%; }
+.monitor-app .buff-catalog-dialog { width: min(100% - 24px, 690px); }
+.buff-catalog-filters { display: grid; grid-template-columns: minmax(0, 2fr) minmax(108px, 1fr); gap: 10px; }
+.buff-catalog-filters select { width: 100%; }
+.buff-catalog-results {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 244px), 1fr));
+  gap: 8px;
+  max-height: min(43dvh, 405px);
+  margin: 0;
+  padding: 1px 3px 1px 1px;
+  list-style: none;
+  overflow: auto;
+  overscroll-behavior: contain;
+  scrollbar-gutter: stable;
+}
+.buff-catalog-results:empty { display: none; }
+.monitor-app button.buff-catalog-option {
+  display: grid;
+  grid-template-columns: 32px minmax(0, 1fr);
+  align-items: center;
+  gap: 2px 10px;
+  width: 100%;
+  min-height: 58px;
+  text-align: left;
+  overflow-wrap: anywhere;
+}
+.buff-catalog-option img { grid-row: span 2; }
+.buff-catalog-option img, .buff-preview-icon { object-fit: contain; image-rendering: pixelated; }
+.buff-catalog-option strong { font-size: 14px; }
+.buff-catalog-option small { color: var(--muted); font-weight: 500; font-size: 12px; }
+.monitor-app .buff-catalog-option[aria-pressed="true"] {
+  border-color: var(--accent);
+  background: color-mix(in srgb, var(--primary) 14%, var(--panel));
+}
+.buff-catalog-option:focus-visible { outline-offset: -3px; }
+.buff-catalog-actions { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+.buff-custom-details { border-top: 1px solid var(--border); padding-top: 10px; }
+.buff-custom-details form { margin-top: 10px; }
+.buff-dialog .hint { margin: 0; }
+.buff-dialog .hint:empty, #buffLastAlert:empty { display: none; }
+.monitor-app .buff-delete { color: var(--red); }
+.monitor-app .buff-region-dialog { width: min(100% - 24px, 1000px); }
+.monitor-app #buffRegionCanvas { width: 100%; max-height: 65vh; object-fit: contain; touch-action: none; cursor: crosshair; }
 .experience-meta span { color: var(--text); font-variant-numeric: tabular-nums; }
 .experience-goal {
   display: flex;
@@ -737,7 +826,7 @@ main.app-shell { padding-bottom: 16px; }
 @media (max-width: 720px) {
   .app-shell { width: calc(100% - 24px); }
   .app-header-inner { grid-template-columns: minmax(0, 1fr); gap: 5px; }
-  .app-nav { padding: 0; display: grid; grid-template-columns: 4fr 4fr 5fr 3fr 5fr; }
+  .app-nav { padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .app-nav a { padding-inline: 2px; font-size: clamp(11px, 3.6vw, 14px); }
   .app-brand { font-size: 14px; }
   .screen { gap: 12px; padding-block-start: 14px; scroll-margin-top: 120px; }
